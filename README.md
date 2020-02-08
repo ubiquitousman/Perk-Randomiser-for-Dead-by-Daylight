@@ -5,3 +5,6 @@ Having trouble figuring out which perks you want to use in Dead by Daylight? Use
 Will be updated once new perks are added to the game.
 
 *Updated on February 8th, 2020*
+
+
+*All icons have been created by michaelexile. Go follow him on Twitter: @michaelexile*
