@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-public class Program
+static class Program
 {
 	static void Main(){
         Application.EnableVisualStyles();
