@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+namespace DBDRandomizer
+{
     public partial class Randomizer : Form
     {
         public Randomizer()
@@ -21,7 +23,7 @@ using System.Windows.Forms;
 
         private void onlyNewPerksEveryRollToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            //((ToolStripMenuItem)sender).Checked = !((ToolStripMenuItem)sender).Checked;
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -108,3 +110,4 @@ using System.Windows.Forms;
             }
         }
     }
+}
