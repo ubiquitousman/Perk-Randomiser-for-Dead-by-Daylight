@@ -6,7 +6,7 @@ You can either check all perks at once and get four random perks, or you can che
 
 #### Will be updated once new perks are added to the game.
 
-**Updated on February 9th, 2020**
+**Updated on January 27th, 2021**
 
 ![Image of Program](/screenshot-of-program/Capture.PNG)
 
