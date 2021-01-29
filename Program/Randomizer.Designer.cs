@@ -149,7 +149,7 @@
             this.suvivorTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.suvivorTabPage.Size = new System.Drawing.Size(1374, 630);
             this.suvivorTabPage.TabIndex = 0;
-            this.suvivorTabPage.Text = "Survivor";
+            this.suvivorTabPage.Text = "Survivor Perks";
             this.suvivorTabPage.UseVisualStyleBackColor = true;
             // 
             // killerTabPage
@@ -174,7 +174,7 @@
             this.killerTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.killerTabPage.Size = new System.Drawing.Size(1374, 630);
             this.killerTabPage.TabIndex = 1;
-            this.killerTabPage.Text = "Killer";
+            this.killerTabPage.Text = "Killer Perks";
             this.killerTabPage.UseVisualStyleBackColor = true;
             // 
             // survivorPerkList
@@ -205,7 +205,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(183, 20);
             this.label1.TabIndex = 4;
-            this.label1.Text = "1. Select avaliable perks:";
+            this.label1.Text = "1. Select available perks:";
             // 
             // survivorSelectNoneButton
             // 
@@ -214,7 +214,7 @@
             this.survivorSelectNoneButton.Name = "survivorSelectNoneButton";
             this.survivorSelectNoneButton.Size = new System.Drawing.Size(234, 35);
             this.survivorSelectNoneButton.TabIndex = 7;
-            this.survivorSelectNoneButton.Text = "Select None";
+            this.survivorSelectNoneButton.Text = "Deselect All";
             this.survivorSelectNoneButton.UseVisualStyleBackColor = true;
             this.survivorSelectNoneButton.Click += new System.EventHandler(this.survivorSelectNoneButton_Click);
             // 
@@ -236,7 +236,7 @@
             this.survivorRandomizeButton.Name = "survivorRandomizeButton";
             this.survivorRandomizeButton.Size = new System.Drawing.Size(340, 466);
             this.survivorRandomizeButton.TabIndex = 9;
-            this.survivorRandomizeButton.Text = "Randomize!";
+            this.survivorRandomizeButton.Text = "Randomise Perks!";
             this.survivorRandomizeButton.UseVisualStyleBackColor = true;
             this.survivorRandomizeButton.Click += new System.EventHandler(this.survivorRandomizeButton_Click);
             // 
@@ -248,7 +248,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 20);
             this.label2.TabIndex = 8;
-            this.label2.Text = "2. Randomize it:";
+            this.label2.Text = "2. Randomise selection:";
             // 
             // survivorPerkLabel4
             // 
@@ -421,7 +421,7 @@
             this.killerRandomizeButton.Name = "killerRandomizeButton";
             this.killerRandomizeButton.Size = new System.Drawing.Size(340, 466);
             this.killerRandomizeButton.TabIndex = 29;
-            this.killerRandomizeButton.Text = "Randomize!";
+            this.killerRandomizeButton.Text = "Randomise Perks!";
             this.killerRandomizeButton.UseVisualStyleBackColor = true;
             this.killerRandomizeButton.Click += new System.EventHandler(this.killerRandomizeButton_Click);
             // 
@@ -433,7 +433,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(123, 20);
             this.label9.TabIndex = 28;
-            this.label9.Text = "2. Randomize it:";
+            this.label9.Text = "2. Randomise selection:";
             // 
             // killerSelectNoneButton
             // 
@@ -442,7 +442,7 @@
             this.killerSelectNoneButton.Name = "killerSelectNoneButton";
             this.killerSelectNoneButton.Size = new System.Drawing.Size(234, 35);
             this.killerSelectNoneButton.TabIndex = 27;
-            this.killerSelectNoneButton.Text = "Select None";
+            this.killerSelectNoneButton.Text = "Deselect All";
             this.killerSelectNoneButton.UseVisualStyleBackColor = true;
             this.killerSelectNoneButton.Click += new System.EventHandler(this.killerSelectNoneButton_Click);
             // 
@@ -485,7 +485,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(183, 20);
             this.label10.TabIndex = 24;
-            this.label10.Text = "1. Select avaliable perks:";
+            this.label10.Text = "1. Select available perks:";
             // 
             // Randomizer
             // 
@@ -498,8 +498,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(1315, 650);
             this.MinimumSize = new System.Drawing.Size(1315, 650);
-            this.Name = "Randomizer";
-            this.Text = "Randomizer";
+            this.Name = "Dead by Daylight Randomiser Tool by ubiquitousman";
+            this.Text = "Dead by Daylight Randomiser Tool by ubiquitousman";
             this.Load += new System.EventHandler(this.Randomizer_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
