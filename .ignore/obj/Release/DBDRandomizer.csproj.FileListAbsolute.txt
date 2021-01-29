@@ -1,9 +1,0 @@
-C:\Users\Svanholm\Desktop\Perk-Randomiser-for-Dead-by-Daylight\Program\bin\Release\DBDRandomizer.exe.config
-C:\Users\Svanholm\Desktop\Perk-Randomiser-for-Dead-by-Daylight\Program\bin\Release\DBDRandomizer.exe
-C:\Users\Svanholm\Desktop\Perk-Randomiser-for-Dead-by-Daylight\Program\bin\Release\DBDRandomizer.pdb
-C:\Users\Svanholm\Desktop\Perk-Randomiser-for-Dead-by-Daylight\Program\obj\Release\DBDRandomizer.Randomizer.resources
-C:\Users\Svanholm\Desktop\Perk-Randomiser-for-Dead-by-Daylight\Program\obj\Release\DBDRandomizer.Properties.Resources.resources
-C:\Users\Svanholm\Desktop\Perk-Randomiser-for-Dead-by-Daylight\Program\obj\Release\DBDRandomizer.csproj.GenerateResource.cache
-C:\Users\Svanholm\Desktop\Perk-Randomiser-for-Dead-by-Daylight\Program\obj\Release\DBDRandomizer.csproj.CoreCompileInputs.cache
-C:\Users\Svanholm\Desktop\Perk-Randomiser-for-Dead-by-Daylight\Program\obj\Release\DBDRandomizer.exe
-C:\Users\Svanholm\Desktop\Perk-Randomiser-for-Dead-by-Daylight\Program\obj\Release\DBDRandomizer.pdb
