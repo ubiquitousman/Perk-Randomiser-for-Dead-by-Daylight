@@ -6,9 +6,9 @@ You can either check all perks at once and get four random perks, or you can che
 
 #### Will be updated once new perks are added to the game.
 
-**Updated on January 27th, 2021**
+**Updated on January 29th, 2021**
 
 ![Image of Program](/screenshot-of-program/Capture.PNG)
 
 - *All icons have been created by michaelexile. Go follow him on Twitter: @michaelexile*
-- *This is an extension and updated version of Netruk44's randomiser tool*
+- *This is an extended and updated version of Netruk44's randomiser tool*
