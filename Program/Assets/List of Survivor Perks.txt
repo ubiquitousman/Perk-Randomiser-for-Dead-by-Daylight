@@ -1,4 +1,4 @@
-104 perks
+101 perks
 
 Ace in the Hole
 Adrenaline
@@ -14,7 +14,6 @@ Blood Pact
 Boil Over
 Bond
 Boon: Circle of Healing
-Boon: Dark Theory
 Boon: Exponential
 Boon: Shadow Step
 Borrowed Time
@@ -38,7 +37,6 @@ Detective's Hunch
 Distortion
 Diversion
 Déjá Vu
-Empathic Connection
 Empathy
 Fast Track
 Flashbang
@@ -63,7 +61,6 @@ Object of Obsession
 Off the Record
 Open-Handed
 Overcome
-Parental Guidance
 Pharmacy
 Plunderer's Instinct
 Poised
