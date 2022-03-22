@@ -1,4 +1,4 @@
-78 perks
+93 perks
 
 A Nurse's Calling
 Agitation
@@ -10,12 +10,14 @@ Blood Echo
 Blood Warden
 Bloodhound
 Brutal Strength
+Call of Brine
+Claustrophobia
 Corrupt Intervention
 Coulrophobia
 Coup de Grâce
-Cruel Limits
 Dark Devotion
 Dead Man's Switch
+Deadlock
 Deathbound
 Deerstalker
 Discordance
@@ -23,36 +25,46 @@ Distressing
 Dragon's Grip
 Dying Light
 Enduring
+Eruption
+Fearmonger
 Fire Up
 Forced Penance
 Franklin's Demise
 Furtive Chase
 Gearhead
+Grim Embrace
 Hangman's Trick
 Hex: Blood Favour
+Hex: Crowd Control
 Hex: Devour Hope
 Hex: Haunted Ground
 Hex: Huntress Lullaby
 Hex: No One Escapes Death
+Hex: Pentimento
+Hex: Plaything
 Hex: Retribution
 Hex: Ruin
 Hex: The Third Seal
 Hex: Thrill of the Hunt
 Hex: Undying
 Hoarder
+Hysteria
 I'm All Ears
 Infectious Fright
 Insidious
 Iron Grasp
 Iron Maiden
+Jolt
 Knock Out
+Lethal Pursuer
 Lightborn
 Mad Grit
 Make Your Choice
-Mindbreaker
+Merciless Storm
 Monitor & Abuse
 Monstrous Shrine
 Nemesis
+No Way Out
 Oppression
 Overcharge
 Overwhelming Presence
@@ -62,17 +74,20 @@ Predator
 Rancor
 Remember Me
 Save the Best for Last
+Scourge Hook: Floods of Rage
+Scourge Hook: Gift of Pain
+Scourge Hook: Pain Resonance
 Shadowborn
 Sloppy Butcher
 Spies from the Shadows
 Spirit Fury
+Starstruck
 Stridor
-Surge
 Surveillane
 Territorial Imperative
-Tinkerer
 Thanatophobia
 Thrilling Tremors
+Tinkerer
 Trail of Torment
 Unnerving Presence
 Unrelenting
