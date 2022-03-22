@@ -4,11 +4,13 @@ Having trouble figuring out which perks you want to use in Dead by Daylight? Use
 
 You can either check all perks at once and get four random perks, or you can check the perks that you'd like to get mixed up in the randomisation process. You can also check 'Only New Perks Every Roll' to get unique perks for every shuffle.
 
-#### Will be updated once new perks are added to the game.
+#### Will be updated once new perks are added to the game.*
 
 **Updated on March 22nd, 2022**
 
 ![Image of Program](/screenshot-of-program/Capture.PNG)
+
+#### Currently missing the perks from CHAPTER XXIII: Sadako Rising
 
 - *All icons have been created by michaelexile. Go follow him on Twitter: @michaelexile*
 - *This is an extended and updated version of Netruk44's randomiser tool*
