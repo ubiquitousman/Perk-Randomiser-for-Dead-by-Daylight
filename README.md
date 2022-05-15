@@ -6,11 +6,11 @@ You can either check all perks at once and get four random perks, or you can che
 
 #### Will be updated once new perks are added to the game.*
 
-**Updated on March 22nd, 2022**
+**Updated on May 15th, 2022**
 
 ![Image of Program](/screenshot-of-program/Capture.PNG)
 
-#### Currently missing the perks from CHAPTER XXIII: Sadako Rising
+#### Currently missing the perks from CHAPTER XXIV
 
 - *All icons have been created by michaelexile. Go follow him on Twitter: @michaelexile*
 - *This is an extended and updated version of Netruk44's randomiser tool*

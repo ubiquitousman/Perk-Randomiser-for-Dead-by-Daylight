@@ -10,6 +10,7 @@ Blood Echo
 Blood Warden
 Bloodhound
 Brutal Strength
+Call of Brine
 Claustrophobia
 Corrupt Intervention
 Coulrophobia
@@ -59,6 +60,7 @@ Lethal Pursuer
 Lightborn
 Mad Grit
 Make Your Choice
+Merciless Storm
 Monitor & Abuse
 Monstrous Shrine
 Nemesis
@@ -72,6 +74,7 @@ Predator
 Rancor
 Remember Me
 Save the Best for Last
+Scourge Hook: Floods of Rage
 Scourge Hook: Gift of Pain
 Scourge Hook: Pain Resonance
 Shadowborn
