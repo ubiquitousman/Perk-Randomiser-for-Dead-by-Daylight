@@ -1,4 +1,4 @@
-93 perks
+97 perks
 
 A Nurse's Calling
 Agitation
@@ -16,11 +16,13 @@ Corrupt Intervention
 Coulrophobia
 Coup de Grâce
 Dark Devotion
+Darkness Revealed
 Dead Man's Switch
 Deadlock
 Deathbound
 Deerstalker
 Discordance
+Dissolution
 Distressing
 Dragon's Grip
 Dying Light
@@ -77,7 +79,9 @@ Save the Best for Last
 Scourge Hook: Floods of Rage
 Scourge Hook: Gift of Pain
 Scourge Hook: Pain Resonance
+Septic Touch
 Shadowborn
+Shattered Hope
 Sloppy Butcher
 Spies from the Shadows
 Spirit Fury

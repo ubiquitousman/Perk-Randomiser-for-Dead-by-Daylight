@@ -1,4 +1,4 @@
-104 perks
+107 perks
 
 Ace in the Hole
 Adrenaline
@@ -47,6 +47,7 @@ For the People
 Guardian
 Head On
 Hope
+Inner Focus
 Inner Healing
 Iron Will
 Kindred
@@ -63,6 +64,7 @@ Object of Obsession
 Off the Record
 Open-Handed
 Overcome
+Overzealous
 Parental Guidance
 Pharmacy
 Plunderer's Instinct
@@ -74,6 +76,7 @@ Quick & Quiet
 Red Herring
 Renewal
 Repressed Alliance
+Residual Manifest
 Resilience
 Resurgence
 Rookie Spirit
