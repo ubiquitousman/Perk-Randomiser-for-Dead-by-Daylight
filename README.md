@@ -10,7 +10,7 @@ You can either check all perks at once and get four random perks, or you can che
 
 ![Image of Program](/screenshot-of-program/Capture.PNG)
 
-#### Currently missing the perks from CHAPTER XXV
+#### *Currently missing the perks from CHAPTER XXV (upcoming chapter)
 
-- *All icons have been created by EvaZioNe ([Discord Server](https://discord.com/invite/pYVKCZR) + [Steam Group](https://steamcommunity.com/groups/Nebula_Perks))
+- All icons have been created by EvaZioNe ([Discord Server](https://discord.com/invite/pYVKCZR) + [Steam Group](https://steamcommunity.com/groups/Nebula_Perks))
 - *This is an extended and updated version of Netruk44's randomiser tool*
