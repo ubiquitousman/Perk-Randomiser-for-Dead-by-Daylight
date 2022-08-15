@@ -1,7 +1,8 @@
-97 perks
+100 perks
 
 A Nurse's Calling
 Agitation
+Awakened Awareness
 Bamboozle
 Barbecue & Chilli
 Beast of Prey
@@ -87,7 +88,9 @@ Spies from the Shadows
 Spirit Fury
 Starstruck
 Stridor
+Superior Anatomy
 Surveillane
+Terminus
 Territorial Imperative
 Thanatophobia
 Thrilling Tremors

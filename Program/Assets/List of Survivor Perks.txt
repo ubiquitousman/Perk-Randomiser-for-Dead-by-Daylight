@@ -1,4 +1,4 @@
-107 perks
+113 perks
 
 Ace in the Hole
 Adrenaline
@@ -8,6 +8,7 @@ Any Means Necessary
 Appraisal
 Autodidact
 Balanced Landing
+Better Than New
 Bite the Bullet
 Blast Mine
 Blood Pact
@@ -47,6 +48,7 @@ For the People
 Guardian
 Head On
 Hope
+Hyperfocus
 Inner Focus
 Inner Healing
 Iron Will
@@ -56,6 +58,7 @@ Leader
 Left Behind
 Lightweight
 Lithe
+Low Profile
 Lucky Break
 Mettle of Man
 No Mither
@@ -73,6 +76,8 @@ Power Struggle
 Premonition
 Prove Thyself
 Quick & Quiet
+Reactive Healing
+Reassurance
 Red Herring
 Renewal
 Repressed Alliance
@@ -107,3 +112,4 @@ Wake Up!
 We'll Make It
 We're Gonna Live Forever
 Windows of Opportunity
+Wiretap
