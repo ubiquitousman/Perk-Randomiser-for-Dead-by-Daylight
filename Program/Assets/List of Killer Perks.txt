@@ -1,4 +1,4 @@
-100 perks
+103 perks
 
 A Nurse's Calling
 Agitation
@@ -40,6 +40,7 @@ Hangman's Trick
 Hex: Blood Favour
 Hex: Crowd Control
 Hex: Devour Hope
+Hex: Face the Darkness
 Hex: Haunted Ground
 Hex: Huntress Lullaby
 Hex: No One Escapes Death
@@ -51,6 +52,7 @@ Hex: The Third Seal
 Hex: Thrill of the Hunt
 Hex: Undying
 Hoarder
+Hubris
 Hysteria
 I'm All Ears
 Infectious Fright
@@ -68,6 +70,7 @@ Monitor & Abuse
 Monstrous Shrine
 Nemesis
 No Way Out
+Nowhere to Hide
 Oppression
 Overcharge
 Overwhelming Presence

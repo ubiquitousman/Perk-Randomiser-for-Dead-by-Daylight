@@ -1,4 +1,4 @@
-113 perks
+116 perks
 
 Ace in the Hole
 Adrenaline
@@ -44,6 +44,7 @@ Empathy
 Fast Track
 Flashbang
 Flip-Flop
+Fogwise
 For the People
 Guardian
 Head On
@@ -72,10 +73,12 @@ Parental Guidance
 Pharmacy
 Plunderer's Instinct
 Poised
+Potential Energy
 Power Struggle
 Premonition
 Prove Thyself
 Quick & Quiet
+Quick Gambit
 Reactive Healing
 Reassurance
 Red Herring
