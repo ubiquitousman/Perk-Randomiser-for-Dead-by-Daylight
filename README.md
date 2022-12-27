@@ -6,11 +6,11 @@ You can either check all perks at once and get four random perks, or you can che
 
 #### Will be updated once new perks are added to the game.*
 
-**Updated on August 15th, 2022**
+**Updated on December 27th, 2022**
 
 ![Image of Program](/screenshot-of-program/Capture.PNG)
 
-#### *There are currently 213 perks featured in Dead by Daylight as well as within this tool. Currently up-to-date. Next batch of perks will be introduced in CHAPTER XXVI (unannounced upcoming chapter)
+#### *There are currently 219 perks featured in Dead by Daylight as well as within this tool. Currently up-to-date. Next batch of perks will be introduced in CHAPTER XXVII (unannounced upcoming chapter)
 
 - All icons have been created by EvaZioNe ([Discord Server](https://discord.com/invite/pYVKCZR) + [Steam Group](https://steamcommunity.com/groups/Nebula_Perks))
 - *This is an extended and updated version of Netruk44's randomiser tool*
