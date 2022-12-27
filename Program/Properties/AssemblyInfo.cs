@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Perk Randomiser for Dead by Daylight")]
-[assembly: AssemblyCopyright("Copyright © 2022")]
+[assembly: AssemblyCopyright("Copyright © 2022 Alexander Svanholm")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -23,5 +23,5 @@ using System.Runtime.InteropServices;
 [assembly: Guid("c44c8e14-10b0-42e6-ba18-b9e313af6789")]
 
 // Version information
-[assembly: AssemblyVersion("2022.4")]
-[assembly: AssemblyFileVersion("2022.4")]
+[assembly: AssemblyVersion("2022.5")]
+[assembly: AssemblyFileVersion("2022.5")]
