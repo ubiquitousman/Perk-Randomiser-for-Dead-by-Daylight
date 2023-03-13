@@ -7,11 +7,13 @@ Alert
 Any Means Necessary
 Appraisal
 Autodidact
+Background Player
 Balanced Landing
 Better Than New
 Bite the Bullet
 Blast Mine
 Blood Pact
+Blood Rush
 Boil Over
 Bond
 Boon: Circle of Healing
@@ -28,6 +30,7 @@ Calm Spirit
 Clairvoyance
 Corrective Action
 Counterforce
+Cut Loose
 Dance With Me
 Dark Sense
 Dead Hard
@@ -46,6 +49,7 @@ Flashbang
 Flip-Flop
 Fogwise
 For the People
+Friendly Competition
 Guardian
 Head On
 Hope
@@ -103,6 +107,8 @@ Spine Chill
 Sprint Burst
 Stake Out
 Streetwise
+Teamwork: Collective Stealth
+Teamwork: Power of Two
 Technician
 Tenacity
 This Is Not Happening

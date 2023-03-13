@@ -34,6 +34,7 @@ Fire Up
 Forced Penance
 Franklin's Demise
 Furtive Chase
+Game Afoot
 Gearhead
 Grim Embrace
 Hangman's Trick
@@ -62,6 +63,7 @@ Iron Maiden
 Jolt
 Knock Out
 Lethal Pursuer
+Leverage
 Lightborn
 Mad Grit
 Make Your Choice
@@ -97,6 +99,7 @@ Terminus
 Territorial Imperative
 Thanatophobia
 Thrilling Tremors
+THWACK!
 Tinkerer
 Trail of Torment
 Unnerving Presence
