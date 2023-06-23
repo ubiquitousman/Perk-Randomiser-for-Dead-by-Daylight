@@ -1,4 +1,4 @@
-106 perks
+109 perks
 
 A Nurse's Calling
 Agitation
@@ -31,11 +31,13 @@ Enduring
 Eruption
 Fearmonger
 Fire Up
+Forced Hesitation
 Forced Penance
 Franklin's Demise
 Furtive Chase
 Game Afoot
 Gearhead
+Genetic Limits
 Grim Embrace
 Hangman's Trick
 Hex: Blood Favour
@@ -65,6 +67,7 @@ Knock Out
 Lethal Pursuer
 Leverage
 Lightborn
+Machine Learning
 Mad Grit
 Make Your Choice
 Merciless Storm

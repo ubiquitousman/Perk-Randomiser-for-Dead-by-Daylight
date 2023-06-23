@@ -1,4 +1,4 @@
-122 perks
+125 perks
 
 Ace in the Hole
 Adrenaline
@@ -65,6 +65,7 @@ Lightweight
 Lithe
 Low Profile
 Lucky Break
+Made for This
 Mettle of Man
 No Mither
 No One Left Behind
@@ -93,6 +94,7 @@ Resilience
 Resurgence
 Rookie Spirit
 Saboteur
+Scavenger
 Self-Aware
 Self-Care
 Self-Preservation
@@ -112,6 +114,7 @@ Teamwork: Power of Two
 Technician
 Tenacity
 This Is Not Happening
+Troubleshooter
 Unbreakable
 Up the Ante
 Urban Evasion
