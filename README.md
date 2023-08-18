@@ -10,7 +10,7 @@ With the Dead by Daylight Perk Randomiser, prepare to be captivated by unexpecte
 
 #### Will be updated once new perks are added to the game.*
 
-**Updated on August 13, 2023**
+**Updated on August 18, 2023**
 
 ![Image of Program](/screenshot-of-program/Capture.PNG)
 
