@@ -1,4 +1,4 @@
-128 perks
+131 perks
 
 Ace in the Hole
 Adrenaline
@@ -27,6 +27,7 @@ Breakout
 Buckle Up
 Built to Last
 Calm Spirit
+Chemical Trap
 Clairvoyance
 Corrective Action
 Counterforce
@@ -62,10 +63,12 @@ Kindred
 Kinship
 Leader
 Left Behind
+Light-Footed
 Lightweight
 Lithe
 Low Profile
 Lucky Break
+Lucky Star
 Made for This
 Mettle of Man
 No Mither

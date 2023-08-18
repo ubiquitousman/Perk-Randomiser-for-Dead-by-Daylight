@@ -1,7 +1,8 @@
-109 perks
+112 perks
 
 A Nurse's Calling
 Agitation
+Alien Instinct
 Awakened Awareness
 Bamboozle
 Barbecue & Chilli
@@ -83,6 +84,7 @@ Play with Your Food
 Pop Goes the Weasel
 Predator
 Rancor
+Rapid Brutality
 Remember Me
 Save the Best for Last
 Scourge Hook: Floods of Rage
@@ -105,6 +107,7 @@ Thrilling Tremors
 THWACK!
 Tinkerer
 Trail of Torment
+Ultimate Weapon
 Unnerving Presence
 Unrelenting
 Whispers
