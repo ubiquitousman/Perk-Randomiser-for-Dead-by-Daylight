@@ -1,4 +1,4 @@
-112 perks
+115 perks
 
 A Nurse's Calling
 Agitation
@@ -6,6 +6,7 @@ Alien Instinct
 Awakened Awareness
 Bamboozle
 Barbecue & Chilli
+Batteries Included
 Beast of Prey
 Bitter Murmur
 Blood Echo
@@ -35,6 +36,7 @@ Fire Up
 Forced Hesitation
 Forced Penance
 Franklin's Demise
+Friends 'til the End
 Furtive Chase
 Game Afoot
 Gearhead
@@ -54,6 +56,7 @@ Hex: Retribution
 Hex: Ruin
 Hex: The Third Seal
 Hex: Thrill of the Hunt
+Hex: Two Can Play
 Hex: Undying
 Hoarder
 Hubris
