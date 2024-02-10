@@ -1,4 +1,4 @@
-131 perks
+134 perks
 
 Ace in the Hole
 Adrenaline
@@ -19,6 +19,7 @@ Bond
 Boon: Circle of Healing
 Boon: Dark Theory
 Boon: Exponential
+Boon: Illumination
 Boon: Shadow Step
 Borrowed Time
 Botany Knowledge
@@ -27,6 +28,7 @@ Breakout
 Buckle Up
 Built to Last
 Calm Spirit
+Champion of Light
 Chemical Trap
 Clairvoyance
 Corrective Action
@@ -35,6 +37,7 @@ Cut Loose
 Dance With Me
 Dark Sense
 Dead Hard
+Deadline
 Deception
 Decisive Strike
 Deliverance
