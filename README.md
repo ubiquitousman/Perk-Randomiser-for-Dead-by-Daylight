@@ -14,7 +14,7 @@ With the Dead by Daylight Perk Randomiser, prepare to be captivated by unexpecte
 
 ![Image of Program](/screenshot-of-program/Capture.PNG)
 
-#### *There are currently 246 perks featured in Dead by Daylight as well as within this tool. Currently up-to-date. Next batch of perks will be introduced in CHAPTER XXX.V.
+#### *There are currently 249 perks featured in Dead by Daylight as well as within this tool. Currently up-to-date. Next batch of perks will be introduced in CHAPTER XXXI.
 
 - All icons have been created by EvaZioNe ([Discord Server](https://discord.com/invite/pYVKCZR) + [Steam Group](https://steamcommunity.com/groups/Nebula_Perks))
 - *This is an extended and updated version of Netruk44's randomiser tool*
