@@ -1,4 +1,4 @@
-115 perks
+118 perks
 
 A Nurse's Calling
 Agitation
@@ -111,6 +111,9 @@ THWACK!
 Tinkerer
 Trail of Torment
 Ultimate Weapon
+Unbound
+Undone
+Unforeseen
 Unnerving Presence
 Unrelenting
 Whispers
