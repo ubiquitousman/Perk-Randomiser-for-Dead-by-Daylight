@@ -498,8 +498,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(1315, 650);
             this.MinimumSize = new System.Drawing.Size(1315, 650);
-            this.Name = "Dead by Daylight Randomiser Tool | v2024.1";
-            this.Text = "Dead by Daylight Randomiser Tool | v2024.1";
+            this.Name = "Dead by Daylight Randomiser Tool | v2024.2";
+            this.Text = "Dead by Daylight Randomiser Tool | v2024.2";
             this.Load += new System.EventHandler(this.Randomizer_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
