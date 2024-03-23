@@ -1,4 +1,4 @@
-134 perks
+137 perks
 
 Ace in the Hole
 Adrenaline
@@ -61,6 +61,7 @@ Hope
 Hyperfocus
 Inner Focus
 Inner Healing
+Invocation: Weaving Spiders
 Iron Will
 Kindred
 Kinship
@@ -118,6 +119,7 @@ Spine Chill
 Sprint Burst
 Stake Out
 Streetwise
+Strength in Shadows
 Teamwork: Collective Stealth
 Teamwork: Power of Two
 Technician
@@ -132,5 +134,6 @@ Visionary
 Wake Up!
 We'll Make It
 We're Gonna Live Forever
+Wicked
 Windows of Opportunity
 Wiretap
