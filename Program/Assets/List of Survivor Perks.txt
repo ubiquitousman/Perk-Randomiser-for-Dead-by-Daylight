@@ -1,4 +1,4 @@
-137 perks
+140 perks
 
 Ace in the Hole
 Adrenaline
@@ -9,6 +9,7 @@ Appraisal
 Autodidact
 Background Player
 Balanced Landing
+Bardic Inspiration
 Better Than New
 Bite the Bullet
 Blast Mine
@@ -75,6 +76,7 @@ Lucky Break
 Lucky Star
 Made for This
 Mettle of Man
+Mirrored Illusion
 No Mither
 No One Left Behind
 Object of Obsession
@@ -118,6 +120,7 @@ Soul Guard
 Spine Chill
 Sprint Burst
 Stake Out
+Still Sight
 Streetwise
 Strength in Shadows
 Teamwork: Collective Stealth
