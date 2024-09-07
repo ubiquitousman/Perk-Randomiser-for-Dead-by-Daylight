@@ -1,4 +1,4 @@
-121 perks
+124 perks
 
 A Nurse's Calling
 Agitation
@@ -28,6 +28,7 @@ Deerstalker
 Discordance
 Dissolution
 Distressing
+Dominance
 Dragon's Grip
 Dying Light
 Enduring
@@ -57,8 +58,10 @@ Hex: The Third Seal
 Hex: Thrill of the Hunt
 Hex: Two Can Play
 Hex: Undying
+Hex: Wretched Fate
 Hoarder
 Hubris
+Human Greed
 Hysteria
 I'm All Ears
 Infectious Fright
