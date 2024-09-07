@@ -1,4 +1,4 @@
-140 perks
+143 perks
 
 Ace in the Hole
 Adrenaline
@@ -54,12 +54,14 @@ Déjá Vu
 Empathic Connection
 Empathy
 Fast Track
+Finesse
 Fixated
 Flashbang
 Flip-Flop
 Fogwise
 For the People
 Friendly Competition
+Hardened
 Head On
 Hope
 Hyperfocus
@@ -117,6 +119,7 @@ Smash Hit
 Sole Survivor
 Solidarity
 Soul Guard
+Specialist
 Spine Chill
 Sprint Burst
 Stake Out
