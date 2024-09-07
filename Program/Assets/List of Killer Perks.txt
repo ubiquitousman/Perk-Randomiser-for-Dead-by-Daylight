@@ -1,4 +1,4 @@
-118 perks
+121 perks
 
 A Nurse's Calling
 Agitation
@@ -18,6 +18,7 @@ Claustrophobia
 Corrupt Intervention
 Coulrophobia
 Coup de Grâce
+Dark Arrogance
 Dark Devotion
 Darkness Revealed
 Dead Man's Switch
@@ -68,6 +69,7 @@ Iron Grasp
 Iron Maiden
 Jolt
 Knock Out
+Languid Touch
 Lethal Pursuer
 Leverage
 Lightborn
@@ -116,5 +118,6 @@ Undone
 Unforeseen
 Unnerving Presence
 Unrelenting
+Weave Attunement
 Whispers
 Zanshin Tactics
