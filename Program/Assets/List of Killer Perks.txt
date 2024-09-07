@@ -14,10 +14,10 @@ Blood Warden
 Bloodhound
 Brutal Strength
 Call of Brine
-Claustrophobia
 Corrupt Intervention
 Coulrophobia
 Coup de Grâce
+Cruel Limits
 Dark Arrogance
 Dark Devotion
 Darkness Revealed
@@ -32,7 +32,6 @@ Dragon's Grip
 Dying Light
 Enduring
 Eruption
-Fearmonger
 Fire Up
 Forced Hesitation
 Forced Penance
@@ -43,7 +42,6 @@ Game Afoot
 Gearhead
 Genetic Limits
 Grim Embrace
-Hangman's Trick
 Hex: Blood Favour
 Hex: Crowd Control
 Hex: Devour Hope
@@ -67,7 +65,6 @@ Infectious Fright
 Insidious
 Iron Grasp
 Iron Maiden
-Jolt
 Knock Out
 Languid Touch
 Lethal Pursuer
@@ -77,8 +74,8 @@ Machine Learning
 Mad Grit
 Make Your Choice
 Merciless Storm
+Mindbreaker
 Monitor & Abuse
-Monstrous Shrine
 Nemesis
 No Way Out
 Nowhere to Hide
@@ -94,6 +91,8 @@ Remember Me
 Save the Best for Last
 Scourge Hook: Floods of Rage
 Scourge Hook: Gift of Pain
+Scourge Hook: Hangman's Trick
+Scourge Hook: Monstrous Shrine
 Scourge Hook: Pain Resonance
 Septic Touch
 Shadowborn
@@ -104,6 +103,7 @@ Spirit Fury
 Starstruck
 Stridor
 Superior Anatomy
+Surge
 Surveillane
 Terminus
 Territorial Imperative
