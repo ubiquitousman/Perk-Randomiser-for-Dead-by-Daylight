@@ -7,9 +7,11 @@ Alert
 Any Means Necessary
 Appraisal
 Autodidact
+Babysitter
 Background Player
 Balanced Landing
 Bardic Inspiration
+Better Together
 Better Than New
 Bite the Bullet
 Blast Mine
@@ -29,6 +31,7 @@ Breakout
 Buckle Up
 Built to Last
 Calm Spirit
+Camaraderie
 Champion of Light
 Chemical Trap
 Clairvoyance
@@ -51,21 +54,20 @@ Déjá Vu
 Empathic Connection
 Empathy
 Fast Track
+Fixated
 Flashbang
 Flip-Flop
 Fogwise
 For the People
 Friendly Competition
-Guardian
 Head On
 Hope
 Hyperfocus
 Inner Focus
-Inner Healing
+Inner Strength
 Invocation: Weaving Spiders
 Iron Will
 Kindred
-Kinship
 Leader
 Left Behind
 Light-Footed
@@ -98,7 +100,6 @@ Quick Gambit
 Reactive Healing
 Reassurance
 Red Herring
-Renewal
 Repressed Alliance
 Residual Manifest
 Resilience
@@ -107,10 +108,9 @@ Rookie Spirit
 Saboteur
 Scavenger
 Scene Partner
-Self-Aware
+Second Wind
 Self-Care
 Self-Preservation
-Situational Awareness
 Slippery Meat
 Small Game
 Smash Hit
