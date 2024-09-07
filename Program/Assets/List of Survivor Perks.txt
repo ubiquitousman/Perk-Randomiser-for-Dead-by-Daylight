@@ -1,4 +1,4 @@
-143 perks
+146 perks
 
 Ace in the Hole
 Adrenaline
@@ -53,6 +53,8 @@ Dramaturgy
 Déjá Vu
 Empathic Connection
 Empathy
+Exultation
+Eyes of Belmont
 Fast Track
 Finesse
 Fixated
@@ -81,6 +83,7 @@ Lucky Star
 Made for This
 Mettle of Man
 Mirrored Illusion
+Moment of Glory
 No Mither
 No One Left Behind
 Object of Obsession
