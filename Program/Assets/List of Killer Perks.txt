@@ -1,8 +1,9 @@
-124 perks
+127 perks
 
 A Nurse's Calling
 Agitation
 Alien Instinct
+All-Shaking Thunder
 Awakened Awareness
 Bamboozle
 Barbecue & Chilli
@@ -80,6 +81,7 @@ Merciless Storm
 Mindbreaker
 Monitor & Abuse
 Nemesis
+No Quarter
 No Way Out
 Nowhere to Hide
 Oppression
@@ -95,6 +97,7 @@ Save the Best for Last
 Scourge Hook: Floods of Rage
 Scourge Hook: Gift of Pain
 Scourge Hook: Hangman's Trick
+Scourge Hook: Jagged Compass
 Scourge Hook: Monstrous Shrine
 Scourge Hook: Pain Resonance
 Septic Touch
