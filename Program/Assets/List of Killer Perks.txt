@@ -1,4 +1,4 @@
-127 perks
+130 perks
 
 A Nurse's Calling
 Agitation
@@ -37,6 +37,7 @@ Eruption
 Fire Up
 Forced Hesitation
 Forced Penance
+Forever Entwined
 Franklin's Demise
 Friends 'til the End
 Furtive Chase
@@ -51,6 +52,7 @@ Hex: Face the Darkness
 Hex: Haunted Ground
 Hex: Huntress Lullaby
 Hex: No One Escapes Death
+Hex: Nothing but Misery
 Hex: Pentimento
 Hex: Plaything
 Hex: Retribution
@@ -83,6 +85,7 @@ Monitor & Abuse
 Nemesis
 No Quarter
 No Way Out
+None Are Free
 Nowhere to Hide
 Oppression
 Overcharge
