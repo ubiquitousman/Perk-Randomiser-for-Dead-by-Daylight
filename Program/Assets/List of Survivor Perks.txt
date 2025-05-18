@@ -45,6 +45,7 @@ Dead Hard
 Deadline
 Deception
 Decisive Strike
+Déjá Vu
 Deliverance
 Desperate Measures
 Detective's Hunch
@@ -53,7 +54,6 @@ Diversion
 Do No Harm
 Dramaturgy
 Duty of Care
-Déjá Vu
 Empathic Connection
 Empathy
 Exultation
