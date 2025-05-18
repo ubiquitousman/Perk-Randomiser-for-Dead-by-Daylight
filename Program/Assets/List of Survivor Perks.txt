@@ -1,4 +1,4 @@
-149 perks
+152 perks
 
 Ace in the Hole
 Adrenaline
@@ -50,7 +50,9 @@ Desperate Measures
 Detective's Hunch
 Distortion
 Diversion
+Do No Harm
 Dramaturgy
+Duty of Care
 Déjá Vu
 Empathic Connection
 Empathy
@@ -104,6 +106,7 @@ Premonition
 Prove Thyself
 Quick & Quiet
 Quick Gambit
+Rapid Response
 Reactive Healing
 Reassurance
 Red Herring
