@@ -1,4 +1,4 @@
-133 perks (130 excluding duplicate Cenobite perks)
+136 perks (133 excluding duplicate Cenobite perks)
 
 A Nurse's Calling
 Agitation
@@ -45,6 +45,8 @@ Game Afoot
 Gearhead
 Genetic Limits
 Grim Embrace
+Haywire
+Help Wanted
 Hex: Blood Favour
 Hex: Crowd Control
 Hex: Devour Hope
@@ -92,6 +94,7 @@ Nowhere to Hide
 Oppression
 Overcharge
 Overwhelming Presence
+Phantom Fear
 Play with Your Food
 Pop Goes the Weasel
 Predator
