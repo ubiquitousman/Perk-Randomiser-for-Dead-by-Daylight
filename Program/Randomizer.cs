@@ -38,6 +38,14 @@ namespace DBDRandomizer
 
             Common.LoadImages(survivorImageLocation, survivorPerkList);
             Common.LoadImages(killerImageLocation, killerPerkList);
+
+            // hook up event handlers
+            this.survivorPerkList.ItemChecked += SurvivorPerkList_ItemChecked;
+            this.killerPerkList.ItemChecked += KillerPerkList_ItemChecked;
+
+            // set initial text once perks are loaded
+            UpdateSurvivorLabel();
+            UpdateKillerLabel();
         }
 
         private void survivorSelectAllButton_Click(object sender, EventArgs e)
@@ -107,7 +115,35 @@ namespace DBDRandomizer
             {
                 pictures[i].Image = null;
                 labels[i].Text = "";
-            }
+                    }
+		}
+        private void UpdateSurvivorLabel()
+{
+    int total = survivorPerkList.Items.Cast<ListViewItem>()
+                 .Count(item => item.ImageIndex >= 0); // only items with an image
+    int selected = survivorPerkList.CheckedItems.Count;
+
+    this.label1.Text = $"1. Select available perks ({selected} of {total}):";
+}
+
+private void UpdateKillerLabel()
+{
+    int total = killerPerkList.Items.Cast<ListViewItem>()
+                 .Count(item => item.ImageIndex >= 0); // only items with an image
+    int selected = killerPerkList.CheckedItems.Count;
+
+    this.label10.Text = $"1. Select available perks ({selected} of {total}):";
+}
+
+        private void SurvivorPerkList_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            UpdateSurvivorLabel();
+        }
+
+        private void KillerPerkList_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            UpdateKillerLabel();
         }
     }
 }
+
