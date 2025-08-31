@@ -8,13 +8,26 @@ For the brave souls seeking an ever-changing experience, unleash the power of th
 
 With the Dead by Daylight Perk Randomiser, prepare to be captivated by unexpected strategies and discover untapped potential lurking within the fog. Embrace the thrill of the unknown, for it is in the darkness that true mastery awaits... Enter the realm of the random, where every trial becomes a testament to your adaptability and cunning. The fog awaits, survivor. The hunt begins, killer. Embrace the chaos and let the randomiser shape your destiny!
 
-#### Will be updated once new perks are added to the game.*
+---
 
-**Updated on August 31, 2025**
+## Current perks **Updated on August 31, 2025**
+
+- There are currently **294 perks** in Dead by Daylight (291 excluding duplicate Cenobite perks) included in this tool.
+- The tool is kept up-to-date with the latest perks; new chapters will be added as they release.
 
 ![Image of Program](/screenshot-of-program/Capture.PNG)
 
-#### *There are currently 294 perks (291 excluding duplicate Cenobite perks) featured in Dead by Daylight as well as within this tool. Currently up-to-date. Next batch of perks will be introduced once the next chapter releases.
+---
+
+## How to use
+
+1. Download the `.rar` file (e.g., `v2025.3.rar`) and extract it to a folder.  
+2. Make sure the `Assets` folder remains inside the extracted folder.  
+3. Open `DBDRandomizer.exe` to launch the program.
+
+---
+
+## Credits
 
 - All icons have been created by EvaZioNe ([Discord Server](https://discord.com/invite/pYVKCZR) + [Steam Group](https://steamcommunity.com/groups/Nebula_Perks))
-- *This is an extended and updated version of Netruk44's randomiser tool*
+- *This is a heavily enhanced and feature-packed version of Netruk44’s original randomiser tool, with more perks, options, and customisation.*
