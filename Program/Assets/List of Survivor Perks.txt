@@ -1,10 +1,11 @@
-152 perks
+158 perks
 
 Ace in the Hole
 Adrenaline
 Aftercare
 Alert
 Any Means Necessary
+Apocalyptic Ingenuity
 Appraisal
 Autodidact
 Babysitter
@@ -36,6 +37,8 @@ Champion of Light
 Chemical Trap
 Clairvoyance
 Clean Break
+Come and Get Me!
+Conviction
 Corrective Action
 Counterforce
 Cut Loose
@@ -76,6 +79,7 @@ Invocation: Treacherous Crows
 Invocation: Weaving Spiders
 Iron Will
 Kindred
+Last Stand
 Leader
 Left Behind
 Light-Footed
@@ -137,6 +141,8 @@ Streetwise
 Strength in Shadows
 Teamwork: Collective Stealth
 Teamwork: Power of Two
+Teamwork: Throw Down
+Teamwork: Toughen Up
 Technician
 Tenacity
 This Is Not Happening
