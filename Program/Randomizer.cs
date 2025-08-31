@@ -15,6 +15,9 @@ namespace DBDRandomizer
         {
             InitializeComponent();
 
+            // Set window title with the correct version
+            this.Text = $"Dead by Daylight Randomiser Tool | v{Application.ProductVersion}";
+
             survivorPerkList.SmallImageList = new ImageList();
             survivorPerkList.SmallImageList.ImageSize = new Size(64, 64);
             killerPerkList.SmallImageList = new ImageList();
