@@ -207,6 +207,7 @@ namespace DBDRandomizer
         {
             survivorPerkCountTextbox.Visible = true;
             survivorPerkCountTextbox.BringToFront();
+            survivorPerkCountTextbox.Text = GetNumberFromLabel(label2Number.Text).ToString();
             survivorPerkCountTextbox.Focus();
             survivorPerkCountTextbox.SelectAll();
         }
