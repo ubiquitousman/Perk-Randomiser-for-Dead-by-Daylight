@@ -176,7 +176,7 @@ namespace DBDRandomizer
 
         private void survivorRandomizeButton_Click(object sender, EventArgs e)
         {
-            int perkCount = int.TryParse(survivorPerkCountTextbox.Text, out var val) ? val : 4;
+            int perkCount = GetNumberFromLabel(label2Number.Text);
 
             // Optional error handling: ensure not more than selected perks
             if (perkCount > survivorPerkList.CheckedItems.Count)
