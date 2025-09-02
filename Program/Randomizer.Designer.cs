@@ -35,6 +35,7 @@ namespace DBDRandomizer
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onlyNewPerksEveryRollToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.suvivorTabPage = new System.Windows.Forms.TabPage();
             this.killerTabPage = new System.Windows.Forms.TabPage();
@@ -90,6 +91,7 @@ namespace DBDRandomizer
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem,
+            this.resetAllToolStripMenuItem,
             this.quitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -112,6 +114,13 @@ namespace DBDRandomizer
             this.onlyNewPerksEveryRollToolStripMenuItem.Size = new System.Drawing.Size(301, 30);
             this.onlyNewPerksEveryRollToolStripMenuItem.Text = "Only New Perks Every Roll";
             this.onlyNewPerksEveryRollToolStripMenuItem.Click += new System.EventHandler(this.onlyNewPerksEveryRollToolStripMenuItem_Click);
+            // 
+            // resetAllToolStripMenuItem
+            // 
+            this.resetAllToolStripMenuItem.Name = "resetAllToolStripMenuItem";
+            this.resetAllToolStripMenuItem.Size = new System.Drawing.Size(100, 29); // adjust width if needed
+            this.resetAllToolStripMenuItem.Text = "&Reset All";
+            this.resetAllToolStripMenuItem.Click += new System.EventHandler(this.resetAllToolStripMenuItem_Click);
             // 
             // quitToolStripMenuItem
             // 
@@ -591,6 +600,7 @@ namespace DBDRandomizer
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem onlyNewPerksEveryRollToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem resetAllToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage suvivorTabPage;
         private System.Windows.Forms.TabPage killerTabPage;

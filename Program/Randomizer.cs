@@ -29,6 +29,44 @@ namespace DBDRandomizer
             //((ToolStripMenuItem)sender).Checked = !((ToolStripMenuItem)sender).Checked;
         }
 
+        private void resetAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Reset Survivor perks
+            foreach (ListViewItem item in survivorPerkList.Items)
+                item.Checked = false;
+
+            PictureBox[] survivorPictures = { survivorPerkImage1, survivorPerkImage2, survivorPerkImage3, survivorPerkImage4 };
+            Label[] survivorLabels = { survivorPerkLabel1, survivorPerkLabel2, survivorPerkLabel3, survivorPerkLabel4 };
+
+            for (int i = 0; i < 4; i++)
+            {
+                survivorPictures[i].Image = null;
+                survivorLabels[i].Text = "";
+            }
+
+            UpdateSurvivorLabel();
+            UpdateSurvivorRandomizeLabel(4);
+            survivorPerkCountTextbox.Text = "4";
+
+            // Reset Killer perks
+            foreach (ListViewItem item in killerPerkList.Items)
+                item.Checked = false;
+
+            PictureBox[] killerPictures = { killerPerkImage1, killerPerkImage2, killerPerkImage3, killerPerkImage4 };
+            Label[] killerLabels = { killerPerkLabel1, killerPerkLabel2, killerPerkLabel3, killerPerkLabel4 };
+
+            for (int i = 0; i < 4; i++)
+            {
+                killerPictures[i].Image = null;
+                killerLabels[i].Text = "";
+            }
+
+            UpdateKillerLabel();
+            label9Number.Text = "[4]";
+            killerPerkCountTextbox.Text = "4";
+        }
+
+
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
