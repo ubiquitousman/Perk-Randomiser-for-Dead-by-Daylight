@@ -67,6 +67,54 @@ namespace DBDRandomizer
             }
         }
 
+        private int GetNumberFromLabel(string text)
+        {
+            int start = text.IndexOf('[');
+            int end = text.IndexOf(']');
+            if (start >= 0 && end > start)
+            {
+                if (int.TryParse(text.Substring(start + 1, end - start - 1), out int val))
+                    return val;
+            }
+            return 4; // default
+        }
+
+        private void survivorPerkCountTextbox_Leave(object sender, EventArgs e)
+        {
+            ApplyTextboxToLabel();
+        }
+
+        private void survivorPerkCountTextbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ApplyTextboxToLabel();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void killerPerkCountTextbox_Leave(object sender, EventArgs e)
+        {
+            ApplyKillerTextboxToLabel();
+        }
+
+        private void killerPerkCountTextbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ApplyKillerTextboxToLabel();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void killerPerkCountTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                e.Handled = true;
+        }
+
         private void killerSelectAllButton_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem item in killerPerkList.Items)
@@ -75,6 +123,41 @@ namespace DBDRandomizer
             }
         }
 
+        private void ApplyTextboxToLabel()
+        {
+            int value;
+
+            if (int.TryParse(survivorPerkCountTextbox.Text, out value))
+            {
+                if (value < 1) value = 1;
+                if (value > 4) value = 4;
+            }
+            else
+            {
+                value = 4;
+            }
+
+            UpdateSurvivorRandomizeLabel(value);
+            survivorPerkCountTextbox.Visible = false;
+        }
+
+        private void ApplyKillerTextboxToLabel()
+        {
+            int value;
+            if (int.TryParse(killerPerkCountTextbox.Text, out value))
+            {
+                if (value < 1) value = 1;
+                if (value > 4) value = 4;
+            }
+            else
+            {
+                value = 4;
+            }
+
+            label9Number.Text = $"[{value}]";
+            killerPerkCountTextbox.Visible = false;
+        }
+        
         private void killerSelectNoneButton_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem item in killerPerkList.Items)
@@ -83,9 +166,27 @@ namespace DBDRandomizer
             }
         }
 
+        private void survivorPerkCountTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void survivorRandomizeButton_Click(object sender, EventArgs e)
         {
-            var selectedPerks = Common.RandomizePerks(4, survivorPerkList, onlyNewPerksEveryRollToolStripMenuItem.Checked);
+            int perkCount = int.TryParse(survivorPerkCountTextbox.Text, out var val) ? val : 4;
+
+            // Optional error handling: ensure not more than selected perks
+            if (perkCount > survivorPerkList.CheckedItems.Count)
+            {
+                MessageBox.Show($"You selected fewer perks ({survivorPerkList.CheckedItems.Count}) than the desired randomise count ({perkCount}).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var selectedPerks = Common.RandomizePerks(perkCount, survivorPerkList, onlyNewPerksEveryRollToolStripMenuItem.Checked);
+
             PictureBox[] pictures = { survivorPerkImage1, survivorPerkImage2, survivorPerkImage3, survivorPerkImage4 };
             Label[] labels = { survivorPerkLabel1, survivorPerkLabel2, survivorPerkLabel3, survivorPerkLabel4 };
 
@@ -102,9 +203,40 @@ namespace DBDRandomizer
             }
         }
 
+        private void label2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            survivorPerkCountTextbox.Visible = true;
+            survivorPerkCountTextbox.BringToFront();
+            survivorPerkCountTextbox.Focus();
+            survivorPerkCountTextbox.SelectAll();
+        }
+
+        private void label9Number_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            killerPerkCountTextbox.Visible = true;
+            killerPerkCountTextbox.BringToFront();
+            killerPerkCountTextbox.Text = GetNumberFromLabel(label9Number.Text).ToString();
+            killerPerkCountTextbox.Focus();
+            killerPerkCountTextbox.SelectAll();
+        }
+
         private void killerRandomizeButton_Click(object sender, EventArgs e)
         {
-            var selectedPerks = Common.RandomizePerks(4, killerPerkList, onlyNewPerksEveryRollToolStripMenuItem.Checked);
+            int perkCount = GetNumberFromLabel(label9Number.Text);
+
+            var selectedPerks = Common.RandomizePerks(perkCount, killerPerkList, onlyNewPerksEveryRollToolStripMenuItem.Checked);
+
+            if (selectedPerks.Count < perkCount)
+            {
+                MessageBox.Show(
+                    $"You selected fewer perks ({selectedPerks.Count}) than the desired randomise count ({perkCount}).",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
             PictureBox[] pictures = { killerPerkImage1, killerPerkImage2, killerPerkImage3, killerPerkImage4 };
             Label[] labels = { killerPerkLabel1, killerPerkLabel2, killerPerkLabel3, killerPerkLabel4 };
 
@@ -119,7 +251,8 @@ namespace DBDRandomizer
                 pictures[i].Image = null;
                 labels[i].Text = "";
                     }
-		}
+                }
+
         private void UpdateSurvivorLabel()
 {
     int total = survivorPerkList.Items.Cast<ListViewItem>()
@@ -128,6 +261,10 @@ namespace DBDRandomizer
 
     this.label1.Text = $"1. Select available perks ({selected} of {total}):";
 }
+        private void UpdateSurvivorRandomizeLabel(int count)
+        {
+            label2Number.Text = $"[{count}]";
+        }
 
 private void UpdateKillerLabel()
 {

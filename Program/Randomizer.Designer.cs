@@ -1,4 +1,6 @@
-﻿namespace DBDRandomizer
+﻿using System.Windows.Forms;
+
+namespace DBDRandomizer
 {
     partial class Randomizer
     {
@@ -42,7 +44,8 @@
             this.survivorSelectNoneButton = new System.Windows.Forms.Button();
             this.survivorSelectAllButton = new System.Windows.Forms.Button();
             this.survivorRandomizeButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2Static = new System.Windows.Forms.Label();
+            this.label2Number = new System.Windows.Forms.LinkLabel();
             this.survivorPerkLabel4 = new System.Windows.Forms.Label();
             this.survivorPerkImage4 = new System.Windows.Forms.PictureBox();
             this.survivorPerkLabel3 = new System.Windows.Forms.Label();
@@ -139,7 +142,8 @@
             this.suvivorTabPage.Controls.Add(this.survivorPerkImage1);
             this.suvivorTabPage.Controls.Add(this.label3);
             this.suvivorTabPage.Controls.Add(this.survivorRandomizeButton);
-            this.suvivorTabPage.Controls.Add(this.label2);
+            this.suvivorTabPage.Controls.Add(this.label2Static);
+            this.suvivorTabPage.Controls.Add(this.label2Number);
             this.suvivorTabPage.Controls.Add(this.survivorSelectNoneButton);
             this.suvivorTabPage.Controls.Add(this.survivorSelectAllButton);
             this.suvivorTabPage.Controls.Add(this.survivorPerkList);
@@ -239,16 +243,85 @@
             this.survivorRandomizeButton.Text = "Randomise Perks!";
             this.survivorRandomizeButton.UseVisualStyleBackColor = true;
             this.survivorRandomizeButton.Click += new System.EventHandler(this.survivorRandomizeButton_Click);
+
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(482, 19);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 20);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "2. Randomise selection:";
+            // Static part of the label
+            this.label2Static.AutoSize = true;
+            this.label2Static.Location = new System.Drawing.Point(487, 19);
+            this.label2Static.Name = "label2Static";
+            this.label2Static.Size = new System.Drawing.Size(200, 20);
+            this.label2Static.Text = "2. Randomise selection";
+
+            // Dynamic number label [X]
+            this.label2Number.AutoSize = true;
+            this.label2Number.Location = new System.Drawing.Point(660, 19);
+            this.label2Number.Name = "label2Number";
+            this.label2Number.Size = new System.Drawing.Size(30, 20);
+            this.label2Number.TabStop = true;
+            this.label2Number.Text = "[4]";
+            this.label2Number.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.label2_LinkClicked);
+                       
+            this.suvivorTabPage.Controls.Add(this.label2Static);
+            this.suvivorTabPage.Controls.Add(this.label2Number);
+
+
+            // survivorPerkCountTextbox
+            // Instantiate first
+            this.survivorPerkCountTextbox = new System.Windows.Forms.TextBox();
+
+            // Now set properties
+            this.survivorPerkCountTextbox.Location = new System.Drawing.Point(665, 17);
+            this.survivorPerkCountTextbox.Name = "survivorPerkCountTextbox";
+            this.survivorPerkCountTextbox.Size = new System.Drawing.Size(30, 27);
+            this.survivorPerkCountTextbox.Visible = false;
+
+            // Hook up events
+            this.survivorPerkCountTextbox.Leave += new System.EventHandler(this.survivorPerkCountTextbox_Leave);
+            this.survivorPerkCountTextbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.survivorPerkCountTextbox_KeyDown);
+            this.survivorPerkCountTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.survivorPerkCountTextbox_KeyPress);
+
+            // Add to Survivor tab
+            this.suvivorTabPage.Controls.Add(this.survivorPerkCountTextbox);
+
+            // Static label
+            this.label9Static = new System.Windows.Forms.Label();
+            this.label9Static.AutoSize = true;
+            this.label9Static.Location = new System.Drawing.Point(487, 19);
+            this.label9Static.Name = "label9Static";
+            this.label9Static.Size = new System.Drawing.Size(123, 20);
+            this.label9Static.Text = "2. Randomise selection";
+
+            // Dynamic number
+            this.label9Number = new System.Windows.Forms.LinkLabel();
+            this.label9Number.AutoSize = true;
+            this.label9Number.Location = new System.Drawing.Point(660, 19);
+            this.label9Number.Name = "label9Number";
+            this.label9Number.Size = new System.Drawing.Size(30, 20);
+            this.label9Number.TabStop = true;
+            this.label9Number.Text = "[4]";
+            this.label9Number.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.label9Number_LinkClicked);
+
+            // Hidden textbox for editing count
+            this.killerPerkCountTextbox = new System.Windows.Forms.TextBox();
+            this.killerPerkCountTextbox.Location = new System.Drawing.Point(665, 17);
+            this.killerPerkCountTextbox.Name = "killerPerkCountTextbox";
+            this.killerPerkCountTextbox.Size = new System.Drawing.Size(30, 27);
+            this.killerPerkCountTextbox.Visible = false;
+
+            // Hook up events
+            this.label9Number.LinkClicked += new LinkLabelLinkClickedEventHandler(this.label9Number_LinkClicked);
+            this.killerPerkCountTextbox.Leave += new System.EventHandler(this.killerPerkCountTextbox_Leave);
+            this.killerPerkCountTextbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.killerPerkCountTextbox_KeyDown);
+            this.killerPerkCountTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.killerPerkCountTextbox_KeyPress);
+
+            // Add to Killer tab
+            this.killerTabPage.Controls.Add(this.label9Static);
+            this.killerTabPage.Controls.Add(this.label9Number);
+            this.killerTabPage.Controls.Add(this.killerPerkCountTextbox);
+            this.label9Number.BringToFront();
+
             // 
             // survivorPerkLabel4
             // 
@@ -424,16 +497,7 @@
             this.killerRandomizeButton.Text = "Randomise Perks!";
             this.killerRandomizeButton.UseVisualStyleBackColor = true;
             this.killerRandomizeButton.Click += new System.EventHandler(this.killerRandomizeButton_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(482, 19);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 20);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "2. Randomise selection:";
+
             // 
             // killerSelectNoneButton
             // 
@@ -536,7 +600,8 @@
         private System.Windows.Forms.Button survivorSelectNoneButton;
         private System.Windows.Forms.Button survivorSelectAllButton;
         private System.Windows.Forms.Button survivorRandomizeButton;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label2Static;
+        private System.Windows.Forms.LinkLabel label2Number;
         private System.Windows.Forms.Label survivorPerkLabel4;
         private System.Windows.Forms.PictureBox survivorPerkImage4;
         private System.Windows.Forms.Label survivorPerkLabel3;
@@ -560,6 +625,10 @@
         private System.Windows.Forms.Button killerSelectNoneButton;
         private System.Windows.Forms.Button killerSelectAllButton;
         private System.Windows.Forms.ListView killerPerkList;
+        private System.Windows.Forms.TextBox survivorPerkCountTextbox;
+        private System.Windows.Forms.Label label9Static;
+        private System.Windows.Forms.LinkLabel label9Number;
+        private System.Windows.Forms.TextBox killerPerkCountTextbox;
         public System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Label label10;
     }
