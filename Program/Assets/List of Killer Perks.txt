@@ -1,4 +1,4 @@
-136 perks (133 excluding duplicate Cenobite perks)
+139 perks (136 excluding duplicate Cenobite perks)
 
 A Nurse's Calling
 Agitation
@@ -56,6 +56,7 @@ Hex: Haunted Ground
 Hex: Huntress Lullaby
 Hex: No One Escapes Death
 Hex: Nothing but Misery
+Hex: Overture of Doom
 Hex: Pentimento
 Hex: Plaything
 Hex: Retribution
@@ -100,6 +101,7 @@ Pop Goes the Weasel
 Predator
 Rancor
 Rapid Brutality
+Ravenous
 Remember Me
 Save the Best for Last
 Scourge Hook: Floods of Rage
@@ -133,6 +135,7 @@ Undone
 Unforeseen
 Unnerving Presence
 Unrelenting
+Wandering Eye
 Weave Attunement
 Whispers
 Zanshin Tactics
