@@ -28,10 +28,10 @@ With the Dead by Daylight Perk Randomiser, prepare to be captivated by unexpecte
 4. The program will load all survivor and killer perks automatically.
 5. Use the checkboxes to select or deselect perks, or use **Select All / Deselect All** buttons.
 6. Choose how many perks (1-4) to roll:
-- On each tab, next to “2. Randomise selection”, click the [4] link to edit the count.
-- Type a number from 1 to 4 and press Enter.
-- If you enter anything outside 1–4, it will be clamped to the nearest valid value.
-- Do this separately on the Survivor and Killer tabs if you want different counts.
+	- On each tab, next to “2. Randomise selection”, click the [4] link to edit the count.
+	- Type a number from 1 to 4 and press Enter.
+	- If you enter anything outside 1–4, it will be clamped to the nearest valid value.
+	- Do this separately on the Survivor and Killer tabs if you want different counts.
 7. Click **Randomise Perks!** to generate your loadout using the selected perks and the chosen count.
 8. (Optional) Enable **"Only New Perks Every Roll"** in the Options menu if you want a fresh combination each time.
 9. Click **Reset All** in the menu bar to return to defaults.
