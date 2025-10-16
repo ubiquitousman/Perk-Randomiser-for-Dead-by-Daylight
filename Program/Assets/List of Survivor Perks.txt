@@ -1,4 +1,4 @@
-158 perks
+161 perks
 
 Ace in the Hole
 Adrenaline
@@ -69,6 +69,7 @@ Flip-Flop
 Fogwise
 For the People
 Friendly Competition
+Ghost Notes
 Hardened
 Head On
 Hope
@@ -96,6 +97,7 @@ No Mither
 No One Left Behind
 Object of Obsession
 Off the Record
+One-Two-Three-Four!
 Open-Handed
 Overcome
 Overzealous
@@ -118,6 +120,7 @@ Repressed Alliance
 Residual Manifest
 Resilience
 Resurgence
+Road Life
 Rookie Spirit
 Saboteur
 Scavenger
