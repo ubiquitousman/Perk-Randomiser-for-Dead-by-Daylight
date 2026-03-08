@@ -1,4 +1,4 @@
-142 perks (139 excluding duplicate Cenobite perks)
+145 perks (142 excluding duplicate Cenobite and Halloween perks)
 
 A Nurse's Calling
 Agitation
@@ -19,6 +19,7 @@ Corrupt Intervention
 Coulrophobia
 Coup de Grâce
 Cruel Limits
+Cull the Weak
 Dark Arrogance
 Dark Devotion
 Darkness Revealed
@@ -76,6 +77,7 @@ Infectious Fright
 Insidious
 Iron Grasp
 Iron Maiden
+Keep Them Waiting
 Knock Out
 Languid Touch
 Lethal Pursuer
@@ -113,6 +115,7 @@ Scourge Hook: Monstrous Shrine
 Scourge Hook: Pain Resonance
 Scourge Hook: Weeping Wounds
 Secret Project
+See How They Run
 Septic Touch
 Shadowborn
 Shattered Hope
