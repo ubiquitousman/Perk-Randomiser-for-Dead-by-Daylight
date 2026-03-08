@@ -1,4 +1,4 @@
-167 perks
+170 perks (167 excluding duplicate Halloween perks)
 
 Ace in the Hole
 Adrenaline
@@ -28,6 +28,7 @@ Boon: Illumination
 Boon: Shadow Step
 Borrowed Time
 Botany Knowledge
+Bound by Obsession
 Breakdown
 Breakout
 Buckle Up
@@ -57,6 +58,7 @@ Detective's Hunch
 Distortion
 Diversion
 Do No Harm
+Down to the Last
 Dramaturgy
 Duty of Care
 Empathic Connection
@@ -165,5 +167,6 @@ We'll Make It
 We're Gonna Live Forever
 We See You
 Wicked
+Will to Live
 Windows of Opportunity
 Wiretap
