@@ -1,4 +1,4 @@
-139 perks (136 excluding duplicate Cenobite perks)
+142 perks (139 excluding duplicate Cenobite perks)
 
 A Nurse's Calling
 Agitation
@@ -53,6 +53,7 @@ Hex: Devour Hope
 Hex: Face the Darkness
 Hex: Fortune's Fool
 Hex: Haunted Ground
+Hex: Hive Mind
 Hex: Huntress Lullaby
 Hex: No One Escapes Death
 Hex: Nothing but Misery
@@ -111,6 +112,7 @@ Scourge Hook: Jagged Compass
 Scourge Hook: Monstrous Shrine
 Scourge Hook: Pain Resonance
 Scourge Hook: Weeping Wounds
+Secret Project
 Septic Touch
 Shadowborn
 Shattered Hope
@@ -129,6 +131,7 @@ Thrilling Tremors
 THWACK!
 Tinkerer
 Trail of Torment
+Turn Back the Clock
 Ultimate Weapon
 Unbound
 Undone
