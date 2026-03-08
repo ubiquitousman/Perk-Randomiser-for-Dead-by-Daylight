@@ -1,5 +1,6 @@
-170 perks (167 excluding duplicate Halloween perks)
+173 perks (170 excluding duplicate Halloween perks)
 
+A Place For Us
 Ace in the Hole
 Adrenaline
 Aftercare
@@ -68,9 +69,11 @@ Exultation
 Eyes of Belmont
 Fast Track
 Finesse
+Five Moves Ahead
 Fixated
 Flashbang
 Flip-Flop
+Flow State
 Fogwise
 For the People
 Friendly Competition
