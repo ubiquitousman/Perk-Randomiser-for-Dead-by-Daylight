@@ -12,7 +12,7 @@ With the Dead by Daylight Perk Randomiser, prepare to be captivated by unexpecte
 
 ## Current perks
 
-- There are currently **315 perks** in Dead by Daylight (306 excluding duplicate Cenobite and Halloween perks) included in this tool.
+- There are currently **318 perks** in Dead by Daylight (309 excluding duplicate Cenobite and Halloween perks) included in this tool.
 - The tool is kept up-to-date with the latest perks; new chapters will be added as they release.
 - Updated on March 8, 2026.
 
@@ -22,7 +22,7 @@ With the Dead by Daylight Perk Randomiser, prepare to be captivated by unexpecte
 
 ## How to use
 
-1. Download the `.rar` file (e.g., `v2026.1.rar`) and extract it to a folder.  
+1. Download the `.rar` file (e.g., `v2026.2.rar`) and extract it to a folder.  
 2. Make sure the `Assets` folder remains inside the extracted folder.
 3. Open `DBDRandomizer.exe` to launch the program.
 4. The program will load all survivor and killer perks automatically.
