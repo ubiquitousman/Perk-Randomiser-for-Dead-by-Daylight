@@ -14,6 +14,26 @@ namespace DBDRandomizer
 {
     class Common
     {
+        private static string FormatPerkName(string rawName)
+        {
+            string[] colonPrefixes =
+            {
+                "Boon",
+                "Hex",
+                "Invocation",
+                "Scourge Hook",
+                "Teamwork"
+            };
+
+            foreach (string prefix in colonPrefixes)
+            {
+                if (rawName.StartsWith(prefix + " ") && !rawName.StartsWith(prefix + ":"))
+                {
+                    return rawName.Replace(prefix + " ", prefix + ": ");
+                }
+            }
+            return rawName;
+        }
         public static void LoadImages(string location, ListView list)
         {
             var perkImages = Directory.EnumerateFiles(location);
@@ -22,6 +42,8 @@ namespace DBDRandomizer
                 var perkName = perk.Replace('_', ' ');
                 perkName = perkName.Replace(location, "");
                 perkName = perkName.Substring(0, perkName.LastIndexOf('.'));
+                perkName = FormatPerkName(perkName);
+
                 ListViewItem listItem = new ListViewItem(perkName);
 
                 Image perkImage = Image.FromFile(perk);
