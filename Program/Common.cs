@@ -14,6 +14,14 @@ namespace DBDRandomizer
 {
     class Common
     {
+        public class SavedSetup
+        {
+            public List<string> SurvivorCheckedPerks { get; set; } = new List<string>();
+            public List<string> KillerCheckedPerks { get; set; } = new List<string>();
+            public int SurvivorPerkCount { get; set; } = 4;
+            public int KillerPerkCount { get; set; } = 4;
+            public bool OnlyNewPerksEveryRoll { get; set; } = false;
+        }
         private static string FormatPerkName(string rawName)
         {
             string[] colonPrefixes =
@@ -61,6 +69,7 @@ namespace DBDRandomizer
         }
 
         private static List<string> previousPerks = new List<string>();
+        private static readonly string SavedSetupFilePath = Path.Combine(Application.StartupPath, "savedsetup.txt");
 
         public static List<Perk> RandomizePerks(int count, ListView list, bool uniquePerks)
         {
@@ -108,6 +117,102 @@ namespace DBDRandomizer
             }
 
             return selectedPerks;
+        }
+
+        public static void SaveSetup(SavedSetup setup)
+        {
+            List<string> lines = new List<string>();
+
+            lines.Add("SURVIVOR_COUNT=" + setup.SurvivorPerkCount);
+            lines.Add("KILLER_COUNT=" + setup.KillerPerkCount);
+            lines.Add("ONLY_NEW=" + setup.OnlyNewPerksEveryRoll);
+
+            lines.Add("SURVIVOR:");
+            foreach (string perk in setup.SurvivorCheckedPerks)
+            {
+                lines.Add(perk);
+            }
+
+            lines.Add("KILLER:");
+            foreach (string perk in setup.KillerCheckedPerks)
+            {
+                lines.Add(perk);
+            }
+
+            File.WriteAllLines(SavedSetupFilePath, lines);
+        }
+
+        public static SavedSetup LoadSetup()
+        {
+            if (!File.Exists(SavedSetupFilePath))
+            {
+                return null;
+            }
+
+            string[] lines = File.ReadAllLines(SavedSetupFilePath);
+            SavedSetup setup = new SavedSetup();
+
+            bool readingSurvivor = false;
+            bool readingKiller = false;
+
+            foreach (string line in lines)
+            {
+                if (line.StartsWith("SURVIVOR_COUNT="))
+                {
+                    int value;
+                    if (int.TryParse(line.Replace("SURVIVOR_COUNT=", ""), out value))
+                    {
+                        setup.SurvivorPerkCount = value;
+                    }
+                }
+                else if (line.StartsWith("KILLER_COUNT="))
+                {
+                    int value;
+                    if (int.TryParse(line.Replace("KILLER_COUNT=", ""), out value))
+                    {
+                        setup.KillerPerkCount = value;
+                    }
+                }
+                else if (line.StartsWith("ONLY_NEW="))
+                {
+                    bool value;
+                    if (bool.TryParse(line.Replace("ONLY_NEW=", ""), out value))
+                    {
+                        setup.OnlyNewPerksEveryRoll = value;
+                    }
+                }
+                else if (line == "SURVIVOR:")
+                {
+                    readingSurvivor = true;
+                    readingKiller = false;
+                }
+                else if (line == "KILLER:")
+                {
+                    readingSurvivor = false;
+                    readingKiller = true;
+                }
+                else
+                {
+                    if (readingSurvivor && line != "")
+                    {
+                        setup.SurvivorCheckedPerks.Add(line);
+                    }
+                    else if (readingKiller && line != "")
+                    {
+                        setup.KillerCheckedPerks.Add(line);
+                    }
+                }
+            }
+
+            return setup;
+        }
+
+        public static void ClearSavedSetup()
+        {
+            if (File.Exists(SavedSetupFilePath))
+            {
+                File.Delete(SavedSetupFilePath);
+            }
         }
     }
 }
