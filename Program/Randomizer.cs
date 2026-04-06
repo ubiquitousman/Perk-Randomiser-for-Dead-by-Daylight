@@ -11,10 +11,14 @@ namespace DBDRandomizer
 {
     public partial class Randomizer : Form
     {
+        private bool isLoadingSetup = false;
+        private string lastSavedState = "";
+        private bool isClearingSavedSetup = false;
         public Randomizer()
         {
             InitializeComponent();
 
+            this.FormClosing += new FormClosingEventHandler(this.Randomizer_FormClosing);
             // Set window title with the correct version
             this.Text = $"Dead by Daylight Randomiser Tool | v{Application.ProductVersion}";
 
@@ -87,6 +91,7 @@ namespace DBDRandomizer
             // set initial text once perks are loaded
             UpdateSurvivorLabel();
             UpdateKillerLabel();
+            LoadSavedSetupOnStartup();
         }
 
         private void survivorSelectAllButton_Click(object sender, EventArgs e)
@@ -115,6 +120,176 @@ namespace DBDRandomizer
                     return val;
             }
             return 4; // default
+        }
+
+        private Common.SavedSetup BuildCurrentSetup()
+        {
+            Common.SavedSetup setup = new Common.SavedSetup();
+
+            foreach (ListViewItem item in survivorPerkList.Items)
+            {
+                if (item.Checked)
+                {
+                    setup.SurvivorCheckedPerks.Add(item.Text);
+                }
+            }
+
+            foreach (ListViewItem item in killerPerkList.Items)
+            {
+                if (item.Checked)
+                {
+                    setup.KillerCheckedPerks.Add(item.Text);
+                }
+            }
+
+            setup.SurvivorPerkCount = GetNumberFromLabel(label2Number.Text);
+            setup.KillerPerkCount = GetNumberFromLabel(label9Number.Text);
+            setup.OnlyNewPerksEveryRoll = onlyNewPerksEveryRollToolStripMenuItem.Checked;
+
+            return setup;
+        }
+
+        private string SerializeSetupForComparison(Common.SavedSetup setup)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine(setup.SurvivorPerkCount.ToString());
+            sb.AppendLine(setup.KillerPerkCount.ToString());
+            sb.AppendLine(setup.OnlyNewPerksEveryRoll.ToString());
+
+            foreach (string perk in setup.SurvivorCheckedPerks.OrderBy(p => p))
+            {
+                sb.AppendLine("S:" + perk);
+            }
+
+            foreach (string perk in setup.KillerCheckedPerks.OrderBy(p => p))
+            {
+                sb.AppendLine("K:" + perk);
+            }
+
+            return sb.ToString();
+        }
+
+        private void ApplySetup(Common.SavedSetup setup)
+        {
+            if (setup == null)
+            {
+                return;
+            }
+
+            isLoadingSetup = true;
+
+            foreach (ListViewItem item in survivorPerkList.Items)
+            {
+                item.Checked = setup.SurvivorCheckedPerks.Contains(item.Text);
+            }
+
+            foreach (ListViewItem item in killerPerkList.Items)
+            {
+                item.Checked = setup.KillerCheckedPerks.Contains(item.Text);
+            }
+
+            UpdateSurvivorRandomizeLabel(setup.SurvivorPerkCount);
+            label9Number.Text = $"[{setup.KillerPerkCount}]";
+
+            survivorPerkCountTextbox.Text = setup.SurvivorPerkCount.ToString();
+            killerPerkCountTextbox.Text = setup.KillerPerkCount.ToString();
+
+            onlyNewPerksEveryRollToolStripMenuItem.Checked = setup.OnlyNewPerksEveryRoll;
+
+            UpdateSurvivorLabel();
+            UpdateKillerLabel();
+
+            isLoadingSetup = false;
+        }
+
+        private void LoadSavedSetupOnStartup()
+        {
+            Common.SavedSetup setup = Common.LoadSetup();
+
+            if (setup != null)
+            {
+                ApplySetup(setup);
+                lastSavedState = SerializeSetupForComparison(setup);
+            }
+            else
+            {
+                lastSavedState = "";
+            }
+        }
+
+        private bool HasUnsavedChanges()
+        {
+            if (isLoadingSetup)
+            {
+                return false;
+            }
+
+            Common.SavedSetup currentSetup = BuildCurrentSetup();
+            string currentState = SerializeSetupForComparison(currentSetup);
+
+            return currentState != lastSavedState;
+        }
+
+        private void SaveCurrentSetup()
+        {
+            Common.SavedSetup setup = BuildCurrentSetup();
+            Common.SaveSetup(setup);
+            lastSavedState = SerializeSetupForComparison(setup);
+        }
+
+        private void saveCurrentSetupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveCurrentSetup();
+            MessageBox.Show("Current setup saved.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void clearSavedSetupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Clear the saved setup and restart the program?",
+                "Clear Saved Setup",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                Common.ClearSavedSetup();
+                lastSavedState = "";
+                isClearingSavedSetup = true;
+                Application.Restart();
+                Environment.Exit(0);
+            }
+        }
+
+        private void Randomizer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (isClearingSavedSetup)
+            {
+                return;
+            }
+
+            if (!HasUnsavedChanges())
+            {
+                return;
+            }
+
+            DialogResult result = MessageBox.Show(
+                "Do you want to save your current setup before closing?",
+                "Save Changes",
+                MessageBoxButtons.YesNoCancel,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                SaveCurrentSetup();
+            }
+            else if (result == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
         }
 
         private void survivorPerkCountTextbox_Leave(object sender, EventArgs e)
