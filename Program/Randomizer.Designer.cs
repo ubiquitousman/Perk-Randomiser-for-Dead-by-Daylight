@@ -38,6 +38,8 @@ namespace DBDRandomizer
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onlyNewPerksEveryRollToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveCurrentSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearSavedSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 
@@ -119,7 +121,9 @@ namespace DBDRandomizer
             // 
             // Options menu with a single toggle item: Only New Perks Every Roll
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-                this.onlyNewPerksEveryRollToolStripMenuItem
+                this.onlyNewPerksEveryRollToolStripMenuItem,
+                this.saveCurrentSetupToolStripMenuItem,
+                this.clearSavedSetupToolStripMenuItem
             });
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
@@ -134,6 +138,22 @@ namespace DBDRandomizer
             this.onlyNewPerksEveryRollToolStripMenuItem.Size = new System.Drawing.Size(301, 30);
             this.onlyNewPerksEveryRollToolStripMenuItem.Text = "Only New Perks Every Roll";
             this.onlyNewPerksEveryRollToolStripMenuItem.Click += new System.EventHandler(this.onlyNewPerksEveryRollToolStripMenuItem_Click);
+
+            // 
+            // saveCurrentSetupToolStripMenuItem
+            // 
+            this.saveCurrentSetupToolStripMenuItem.Name = "saveCurrentSetupToolStripMenuItem";
+            this.saveCurrentSetupToolStripMenuItem.Size = new System.Drawing.Size(301, 30);
+            this.saveCurrentSetupToolStripMenuItem.Text = "Save Current Setup";
+            this.saveCurrentSetupToolStripMenuItem.Click += new System.EventHandler(this.saveCurrentSetupToolStripMenuItem_Click);
+
+            // 
+            // clearSavedSetupToolStripMenuItem
+            // 
+            this.clearSavedSetupToolStripMenuItem.Name = "clearSavedSetupToolStripMenuItem";
+            this.clearSavedSetupToolStripMenuItem.Size = new System.Drawing.Size(301, 30);
+            this.clearSavedSetupToolStripMenuItem.Text = "Clear Saved Setup";
+            this.clearSavedSetupToolStripMenuItem.Click += new System.EventHandler(this.clearSavedSetupToolStripMenuItem_Click);
 
             // 
             // resetAllToolStripMenuItem
@@ -685,6 +705,8 @@ namespace DBDRandomizer
         private ToolStripMenuItem onlyNewPerksEveryRollToolStripMenuItem;
         private ToolStripMenuItem resetAllToolStripMenuItem;
         private ToolStripMenuItem quitToolStripMenuItem;
+        private ToolStripMenuItem saveCurrentSetupToolStripMenuItem;
+        private ToolStripMenuItem clearSavedSetupToolStripMenuItem;
 
         private TabControl tabControl1;
         private TabPage suvivorTabPage;
