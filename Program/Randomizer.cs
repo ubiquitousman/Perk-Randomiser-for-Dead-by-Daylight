@@ -14,6 +14,8 @@ namespace DBDRandomizer
         private bool isLoadingSetup = false;
         private string lastSavedState = "";
         private bool isClearingSavedSetup = false;
+        private bool hasUnsavedChanges = false;
+
         public Randomizer()
         {
             InitializeComponent();
@@ -30,7 +32,10 @@ namespace DBDRandomizer
 
         private void onlyNewPerksEveryRollToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //((ToolStripMenuItem)sender).Checked = !((ToolStripMenuItem)sender).Checked;
+            if (!isLoadingSetup)
+            {
+                hasUnsavedChanges = true;
+            }
         }
 
         private void resetAllToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,6 +73,8 @@ namespace DBDRandomizer
             UpdateKillerLabel();
             label9Number.Text = "[4]";
             killerPerkCountTextbox.Text = "4";
+
+            hasUnsavedChanges = true;
         }
 
 
@@ -216,6 +223,8 @@ namespace DBDRandomizer
             {
                 lastSavedState = "";
             }
+
+            hasUnsavedChanges = false;
         }
 
         private bool HasUnsavedChanges()
@@ -225,10 +234,7 @@ namespace DBDRandomizer
                 return false;
             }
 
-            Common.SavedSetup currentSetup = BuildCurrentSetup();
-            string currentState = SerializeSetupForComparison(currentSetup);
-
-            return currentState != lastSavedState;
+            return hasUnsavedChanges;
         }
 
         private void SaveCurrentSetup()
@@ -236,6 +242,7 @@ namespace DBDRandomizer
             Common.SavedSetup setup = BuildCurrentSetup();
             Common.SaveSetup(setup);
             lastSavedState = SerializeSetupForComparison(setup);
+            hasUnsavedChanges = false;
         }
 
         private void saveCurrentSetupToolStripMenuItem_Click(object sender, EventArgs e)
@@ -257,6 +264,7 @@ namespace DBDRandomizer
             {
                 Common.ClearSavedSetup();
                 lastSavedState = "";
+                hasUnsavedChanges = false;
                 isClearingSavedSetup = true;
                 Application.Restart();
                 Environment.Exit(0);
@@ -352,6 +360,11 @@ namespace DBDRandomizer
 
             UpdateSurvivorRandomizeLabel(value);
             survivorPerkCountTextbox.Visible = false;
+
+            if (!isLoadingSetup)
+            {
+                hasUnsavedChanges = true;
+            }
         }
 
         private void ApplyKillerTextboxToLabel()
@@ -369,6 +382,11 @@ namespace DBDRandomizer
 
             label9Number.Text = $"[{value}]";
             killerPerkCountTextbox.Visible = false;
+
+            if (!isLoadingSetup)
+            {
+                hasUnsavedChanges = true;
+            }
         }
         
         private void killerSelectNoneButton_Click(object sender, EventArgs e)
@@ -492,11 +510,21 @@ private void UpdateKillerLabel()
         private void SurvivorPerkList_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
             UpdateSurvivorLabel();
+
+            if (!isLoadingSetup)
+            {
+                hasUnsavedChanges = true;
+            }
         }
 
         private void KillerPerkList_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
             UpdateKillerLabel();
+
+            if (!isLoadingSetup)
+            {
+                hasUnsavedChanges = true;
+            }
         }
     }
 }
