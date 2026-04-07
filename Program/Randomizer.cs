@@ -99,6 +99,7 @@ namespace DBDRandomizer
             UpdateSurvivorLabel();
             UpdateKillerLabel();
             LoadSavedSetupOnStartup();
+            UpdateClearSavedSetupMenuState();
         }
 
         private void survivorSelectAllButton_Click(object sender, EventArgs e)
@@ -210,6 +211,12 @@ namespace DBDRandomizer
             isLoadingSetup = false;
         }
 
+        private void UpdateClearSavedSetupMenuState()
+        {
+            string path = System.IO.Path.Combine(Application.StartupPath, "savedsetup.txt");
+            clearSavedSetupToolStripMenuItem.Enabled = System.IO.File.Exists(path);
+        }
+
         private void LoadSavedSetupOnStartup()
         {
             Common.SavedSetup setup = Common.LoadSetup();
@@ -243,6 +250,7 @@ namespace DBDRandomizer
             Common.SaveSetup(setup);
             lastSavedState = SerializeSetupForComparison(setup);
             hasUnsavedChanges = false;
+            UpdateClearSavedSetupMenuState();
         }
 
         private void saveCurrentSetupToolStripMenuItem_Click(object sender, EventArgs e)
@@ -263,6 +271,7 @@ namespace DBDRandomizer
             if (result == DialogResult.Yes)
             {
                 Common.ClearSavedSetup();
+                UpdateClearSavedSetupMenuState();
                 lastSavedState = "";
                 hasUnsavedChanges = false;
                 isClearingSavedSetup = true;
