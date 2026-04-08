@@ -66,6 +66,10 @@ namespace DBDRandomizer
             this.survivorPerkLabel1 = new System.Windows.Forms.Label();
             this.survivorPerkImage1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.survivorLockButton1 = new System.Windows.Forms.Button();
+            this.survivorLockButton2 = new System.Windows.Forms.Button();
+            this.survivorLockButton3 = new System.Windows.Forms.Button();
+            this.survivorLockButton4 = new System.Windows.Forms.Button();
 
             // Killer tab controls: labels, images, buttons, list, etc.
             this.killerPerkLabel4 = new System.Windows.Forms.Label();
@@ -191,12 +195,16 @@ namespace DBDRandomizer
             // Survivor Perks tab: compose the controls
             this.suvivorTabPage.Controls.Add(this.survivorPerkLabel4);
             this.suvivorTabPage.Controls.Add(this.survivorPerkImage4);
+            this.suvivorTabPage.Controls.Add(this.survivorLockButton4);
             this.suvivorTabPage.Controls.Add(this.survivorPerkLabel3);
             this.suvivorTabPage.Controls.Add(this.survivorPerkImage3);
+            this.suvivorTabPage.Controls.Add(this.survivorLockButton3);
             this.suvivorTabPage.Controls.Add(this.survivorPerkLabel2);
             this.suvivorTabPage.Controls.Add(this.survivorPerkImage2);
+            this.suvivorTabPage.Controls.Add(this.survivorLockButton2);
             this.suvivorTabPage.Controls.Add(this.survivorPerkLabel1);
             this.suvivorTabPage.Controls.Add(this.survivorPerkImage1);
+            this.suvivorTabPage.Controls.Add(this.survivorLockButton1);
             this.suvivorTabPage.Controls.Add(this.label3);
             this.suvivorTabPage.Controls.Add(this.survivorRandomizeButton);
             this.suvivorTabPage.Controls.Add(this.label2Static);
@@ -492,6 +500,54 @@ namespace DBDRandomizer
             this.label3.TabIndex = 15;
             this.label3.Text = "3. Your perks:";
 
+            //
+            // survivorLockButton1
+            //
+            this.survivorLockButton1.Enabled = false;
+            this.survivorLockButton1.Location = new System.Drawing.Point(1200, 74);
+            this.survivorLockButton1.Name = "survivorLockButton1";
+            this.survivorLockButton1.Size = new System.Drawing.Size(80, 30);
+            this.survivorLockButton1.TabIndex = 39;
+            this.survivorLockButton1.Text = "Lock";
+            this.survivorLockButton1.UseVisualStyleBackColor = true;
+            this.survivorLockButton1.Click += new System.EventHandler(this.survivorLockButton1_Click);
+
+            //
+            // survivorLockButton2
+            //
+            this.survivorLockButton2.Enabled = false;
+            this.survivorLockButton2.Location = new System.Drawing.Point(1200, 182);
+            this.survivorLockButton2.Name = "survivorLockButton2";
+            this.survivorLockButton2.Size = new System.Drawing.Size(80, 30);
+            this.survivorLockButton2.TabIndex = 40;
+            this.survivorLockButton2.Text = "Lock";
+            this.survivorLockButton2.UseVisualStyleBackColor = true;
+            this.survivorLockButton2.Click += new System.EventHandler(this.survivorLockButton2_Click);
+
+            //
+            // survivorLockButton3
+            //
+            this.survivorLockButton3.Enabled = false;
+            this.survivorLockButton3.Location = new System.Drawing.Point(1200, 289);
+            this.survivorLockButton3.Name = "survivorLockButton3";
+            this.survivorLockButton3.Size = new System.Drawing.Size(80, 30);
+            this.survivorLockButton3.TabIndex = 41;
+            this.survivorLockButton3.Text = "Lock";
+            this.survivorLockButton3.UseVisualStyleBackColor = true;
+            this.survivorLockButton3.Click += new System.EventHandler(this.survivorLockButton3_Click);
+
+            //
+            // survivorLockButton4
+            //
+            this.survivorLockButton4.Enabled = false;
+            this.survivorLockButton4.Location = new System.Drawing.Point(1200, 397);
+            this.survivorLockButton4.Name = "survivorLockButton4";
+            this.survivorLockButton4.Size = new System.Drawing.Size(80, 30);
+            this.survivorLockButton4.TabIndex = 42;
+            this.survivorLockButton4.Text = "Lock";
+            this.survivorLockButton4.UseVisualStyleBackColor = true;
+            this.survivorLockButton4.Click += new System.EventHandler(this.survivorLockButton4_Click);
+
             // 
             // killerPerkLabel4
             // 
@@ -732,6 +788,10 @@ namespace DBDRandomizer
         private PictureBox survivorPerkImage2;
         private PictureBox survivorPerkImage3;
         private PictureBox survivorPerkImage4;
+        private Button survivorLockButton1;
+        private Button survivorLockButton2;
+        private Button survivorLockButton3;
+        private Button survivorLockButton4;
 
         private ListView killerPerkList;
         private ColumnHeader columnHeader1;
