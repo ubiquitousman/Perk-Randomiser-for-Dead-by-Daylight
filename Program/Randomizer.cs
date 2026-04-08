@@ -169,14 +169,21 @@ namespace DBDRandomizer
                 if (!hasPerk)
                 {
                     survivorLockedPerks[i] = null;
+                    buttons[i].Visible = false;
+                    buttons[i].Enabled = false;
                 }
-                else if (survivorLockedPerks[i] != null & survivorLockedPerks[i] != labels[i].Text)
+                else
                 {
-                    survivorLockedPerks[i] = null;
-                }
+                    buttons[i].Visible = true;
+                    buttons[i].Enabled = true;
 
-                buttons[i].Enabled = hasPerk;
-                buttons[i].Text = survivorLockedPerks[i] != null ? "Unlock" : "Lock";
+                    if (survivorLockedPerks[i] != null && survivorLockedPerks[i] != labels[i].Text)
+                    {
+                        survivorLockedPerks[i] = null;
+                    }
+
+                    buttons[i].Text = survivorLockedPerks[i] != null ? "Unlock" : "Lock";
+                }
             }
         }
 
