@@ -504,7 +504,7 @@ namespace DBDRandomizer
             // survivorLockButton1
             //
             this.survivorLockButton1.Enabled = false;
-            this.survivorLockButton1.Location = new System.Drawing.Point(1200, 74);
+            this.survivorLockButton1.Location = new System.Drawing.Point(1190, 74);
             this.survivorLockButton1.Name = "survivorLockButton1";
             this.survivorLockButton1.Size = new System.Drawing.Size(80, 30);
             this.survivorLockButton1.TabIndex = 39;
@@ -516,7 +516,7 @@ namespace DBDRandomizer
             // survivorLockButton2
             //
             this.survivorLockButton2.Enabled = false;
-            this.survivorLockButton2.Location = new System.Drawing.Point(1200, 182);
+            this.survivorLockButton2.Location = new System.Drawing.Point(1190, 182);
             this.survivorLockButton2.Name = "survivorLockButton2";
             this.survivorLockButton2.Size = new System.Drawing.Size(80, 30);
             this.survivorLockButton2.TabIndex = 40;
@@ -528,7 +528,7 @@ namespace DBDRandomizer
             // survivorLockButton3
             //
             this.survivorLockButton3.Enabled = false;
-            this.survivorLockButton3.Location = new System.Drawing.Point(1200, 289);
+            this.survivorLockButton3.Location = new System.Drawing.Point(1190, 289);
             this.survivorLockButton3.Name = "survivorLockButton3";
             this.survivorLockButton3.Size = new System.Drawing.Size(80, 30);
             this.survivorLockButton3.TabIndex = 41;
@@ -540,7 +540,7 @@ namespace DBDRandomizer
             // survivorLockButton4
             //
             this.survivorLockButton4.Enabled = false;
-            this.survivorLockButton4.Location = new System.Drawing.Point(1200, 397);
+            this.survivorLockButton4.Location = new System.Drawing.Point(1190, 397);
             this.survivorLockButton4.Name = "survivorLockButton4";
             this.survivorLockButton4.Size = new System.Drawing.Size(80, 30);
             this.survivorLockButton4.TabIndex = 42;
