@@ -119,6 +119,62 @@ namespace DBDRandomizer
             return selectedPerks;
         }
 
+        public static List<Perk> RandomizePerksExcluding(int count, ListView list, bool uniquePerks, List<string> excludedPerkNames)
+        {
+            Random r = new Random();
+
+            List<Perk> allPerks = new List<Perk>();
+            List<Perk> selectedPerks = new List<Perk>();
+
+            if (excludedPerkNames == null)
+            {
+                excludedPerkNames = new List<string>();
+            }
+
+            List<ListViewItem> eligibleItems = list.CheckedItems.Cast<ListViewItem>().Where(perk => !excludedPerkNames.Contains(perk.Text)).ToList();
+
+            if (uniquePerks && previousPerks != null)
+            {
+                int uniqueAvailable = eligibleItems.Count(perk => !previousPerks.Contains(perk.Text));
+
+                if (uniqueAvailable < count)
+                {
+                    uniquePerks = false;
+                }
+            }
+
+            foreach (ListViewItem perk in  eligibleItems)
+            {
+                Image img = list.SmallImageList.Images[perk.ImageIndex];
+                string name = perk.Text;
+
+                if (uniquePerks == false || !previousPerks.Contains(name))
+                {
+                    allPerks.Add(new Perk
+                    {
+                        Img = img,
+                        Name = name
+                    });
+                }
+            }
+
+            while (allPerks.Count > 0 && selectedPerks.Count < count)
+            {
+                int nextIndex = r.Next(allPerks.Count);
+                Perk nextPerk = allPerks[nextIndex];
+                selectedPerks.Add(nextPerk);
+                allPerks.RemoveAt(nextIndex);
+            }
+
+            return selectedPerks;
+        }
+
+        public static void SetPreviousPerks(List<string> perkNames)
+        {
+            previousPerks.Clear();
+            previousPerks.AddRange(perkNames);
+        }
+
         public static void SaveSetup(SavedSetup setup)
         {
             List<string> lines = new List<string>();
