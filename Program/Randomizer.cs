@@ -16,6 +16,7 @@ namespace DBDRandomizer
         private bool isClearingSavedSetup = false;
         private bool hasUnsavedChanges = false;
         private string[] survivorLockedPerks = new string[4];
+        private string[] killerLockedPerks = new string[4];
 
         public Randomizer()
         {
@@ -80,6 +81,11 @@ namespace DBDRandomizer
             label9Number.Text = "[4]";
             killerPerkCountTextbox.Text = "4";
 
+            for (int i = 0; i < 4; i++)
+                killerLockedPerks[i] = null;
+
+            UpdateKillerLockButtons();
+
             hasUnsavedChanges = true;
         }
 
@@ -106,6 +112,7 @@ namespace DBDRandomizer
             UpdateKillerLabel();
             LoadSavedSetupOnStartup();
             UpdateSurvivorLockButtons();
+            UpdateKillerLockButtons();
             UpdateClearSavedSetupMenuState();
         }
 
@@ -143,6 +150,26 @@ namespace DBDRandomizer
         private void survivorLockButton4_Click(object sender, EventArgs e)
         {
             ToggleSurvivorLock(3);
+        }
+
+        private void killerLockButton1_Click(object sender, EventArgs e)
+        {
+            ToggleKillerLock(0);
+        }
+
+        private void killerLockButton2_Click(object sender, EventArgs e)
+        {
+            ToggleKillerLock(1);
+        }
+
+        private void killerLockButton3_Click(object sender, EventArgs e)
+        {
+            ToggleKillerLock(2);
+        }
+
+        private void killerLockButton4_Click(object sender, EventArgs e)
+        {
+            ToggleKillerLock(3);
         }
 
         private int GetNumberFromLabel(string text)
@@ -214,6 +241,65 @@ namespace DBDRandomizer
             }
 
             UpdateSurvivorLockButtons();
+        }
+
+        private void UpdateKillerLockButtons()
+        {
+            Button[] buttons = { killerLockButton1, killerLockButton2, killerLockButton3, killerLockButton4 };
+            Label[] labels = { killerPerkLabel1, killerPerkLabel2, killerPerkLabel3, killerPerkLabel4 };
+
+            for (int i = 0; i < 4; i++)
+            {
+                bool hasPerk = !string.IsNullOrWhiteSpace(labels[i].Text);
+
+                if (!hasPerk)
+                {
+                    killerLockedPerks[i] = null;
+                    buttons[i].Visible = false;
+                    buttons[i].Enabled = false;
+                }
+                else
+                {
+                    buttons[i].Visible = true;
+                    buttons[i].Enabled = true;
+
+                    if (killerLockedPerks[i] != null && killerLockedPerks[i] != labels[i].Text)
+                    {
+                        killerLockedPerks[i] = null;
+                    }
+
+                    buttons[i].Text = killerLockedPerks[i] != null ? "Unlock" : "Lock";
+                }
+            }
+        }
+
+        private void TrimKillerLocksToCount(int count)
+        {
+            for (int i = count; i < 4; i++)
+            {
+                killerLockedPerks[i] = null;
+            }
+        }
+
+        private void ToggleKillerLock(int index)
+        {
+            Label[] labels = { killerPerkLabel1, killerPerkLabel2, killerPerkLabel3, killerPerkLabel4 };
+
+            if (string.IsNullOrWhiteSpace(labels[index].Text))
+            {
+                return;
+            }
+
+            if (killerLockedPerks[index] == labels[index].Text)
+            {
+                killerLockedPerks[index] = null;
+            }
+            else
+            {
+                killerLockedPerks[index] = labels[index].Text;
+            }
+
+            UpdateKillerLockButtons();
         }
 
         private Common.SavedSetup BuildCurrentSetup()
@@ -297,9 +383,11 @@ namespace DBDRandomizer
             for (int i = 0; i > 4; i++)
             {
                 survivorLockedPerks[i] = null;
+                killerLockedPerks[i] = null;
             }
 
             UpdateSurvivorLockButtons();
+            UpdateKillerLockButtons();
 
             isLoadingSetup = false;
         }
@@ -492,6 +580,9 @@ namespace DBDRandomizer
             {
                 hasUnsavedChanges = true;
             }
+
+            TrimKillerLocksToCount(value);
+            UpdateKillerLockButtons();
         }
         
         private void killerSelectNoneButton_Click(object sender, EventArgs e)
@@ -636,12 +727,10 @@ namespace DBDRandomizer
         {
             int perkCount = GetNumberFromLabel(label9Number.Text);
 
-            var selectedPerks = Common.RandomizePerks(perkCount, killerPerkList, onlyNewPerksEveryRollToolStripMenuItem.Checked);
-
-            if (selectedPerks.Count < perkCount)
+            if (perkCount > killerPerkList.CheckedItems.Count)
             {
                 MessageBox.Show(
-                    $"You selected fewer perks ({selectedPerks.Count}) than the desired randomise count ({perkCount}).",
+                    $"You selected fewer perks ({killerPerkList.CheckedItems.Count}) than the desired randomise count ({perkCount}).",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
@@ -652,18 +741,87 @@ namespace DBDRandomizer
             PictureBox[] pictures = { killerPerkImage1, killerPerkImage2, killerPerkImage3, killerPerkImage4 };
             Label[] labels = { killerPerkLabel1, killerPerkLabel2, killerPerkLabel3, killerPerkLabel4 };
 
-            for (int i = 0; i < selectedPerks.Count; i++)
+            TrimKillerLocksToCount(perkCount);
+
+            List<string> checkedNames = killerPerkList.CheckedItems
+                .Cast<ListViewItem>()
+                .Select(item => item.Text)
+                .ToList();
+
+            HashSet<string> seenLocked = new HashSet<string>();
+
+            for (int i = 0; i < perkCount; i++)
             {
-                pictures[i].Image = selectedPerks[i].Img;
-                labels[i].Text = selectedPerks[i].Name;
+                if (string.IsNullOrWhiteSpace(killerLockedPerks[i]))
+                    continue;
+
+                bool valid = checkedNames.Contains(killerLockedPerks[i]) && seenLocked.Add(killerLockedPerks[i]);
+
+                if (!valid)
+                    killerLockedPerks[i] = null;
             }
 
-            for (int i = selectedPerks.Count; i < 4; i++)
+            List<string> lockedNames = killerLockedPerks
+                .Take(perkCount)
+                .Where(name => !string.IsNullOrWhiteSpace(name))
+                .ToList();
+
+            int rollsNeeded = perkCount - lockedNames.Count;
+
+            var newPerks = Common.RandomizePerksExcluding(
+                rollsNeeded,
+                killerPerkList,
+                onlyNewPerksEveryRollToolStripMenuItem.Checked,
+                lockedNames
+            );
+
+            int newPerkIndex = 0;
+
+            for (int i = 0; i < perkCount; i++)
+            {
+                if (!string.IsNullOrWhiteSpace(killerLockedPerks[i]))
+                {
+                    ListViewItem item = killerPerkList.Items
+                        .Cast<ListViewItem>()
+                        .FirstOrDefault(x => x.Text == killerLockedPerks[i]);
+
+                    if (item != null)
+                    {
+                        pictures[i].Image = killerPerkList.SmallImageList.Images[item.ImageIndex];
+                        labels[i].Text = item.Text;
+                    }
+                    else
+                    {
+                        killerLockedPerks[i] = null;
+                        pictures[i].Image = newPerks[newPerkIndex].Img;
+                        labels[i].Text = newPerks[newPerkIndex].Name;
+                        newPerkIndex++;
+                    }
+                }
+                else
+                {
+                    pictures[i].Image = newPerks[newPerkIndex].Img;
+                    labels[i].Text = newPerks[newPerkIndex].Name;
+                    newPerkIndex++;
+                }
+            }
+
+            for (int i = perkCount; i < 4; i++)
             {
                 pictures[i].Image = null;
                 labels[i].Text = "";
-                    }
-                }
+                killerLockedPerks[i] = null;
+            }
+
+            Common.SetPreviousPerks(
+                labels.Take(perkCount)
+                      .Where(l => !string.IsNullOrWhiteSpace(l.Text))
+                      .Select(l => l.Text)
+                      .ToList()
+            );
+
+            UpdateKillerLockButtons();
+        }
 
         private void UpdateSurvivorLabel()
 {
