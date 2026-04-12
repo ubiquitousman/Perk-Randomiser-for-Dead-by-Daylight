@@ -88,6 +88,10 @@ namespace DBDRandomizer
             this.killerPerkList = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label10 = new System.Windows.Forms.Label();
+            this.killerLockButton1 = new System.Windows.Forms.Button();
+            this.killerLockButton2 = new System.Windows.Forms.Button();
+            this.killerLockButton3 = new System.Windows.Forms.Button();
+            this.killerLockButton4 = new System.Windows.Forms.Button();
 
             // --- Suspend layout while we set properties (keeps UI snappy during initialization) ---
             this.menuStrip1.SuspendLayout();
@@ -227,12 +231,16 @@ namespace DBDRandomizer
             // Killer Perks tab: compose killer side controls
             this.killerTabPage.Controls.Add(this.killerPerkLabel4);
             this.killerTabPage.Controls.Add(this.killerPerkImage4);
+            this.killerTabPage.Controls.Add(this.killerLockButton4);
             this.killerTabPage.Controls.Add(this.killerPerkLabel3);
             this.killerTabPage.Controls.Add(this.killerPerkImage3);
+            this.killerTabPage.Controls.Add(this.killerLockButton3);
             this.killerTabPage.Controls.Add(this.killerPerkLabel2);
             this.killerTabPage.Controls.Add(this.killerPerkImage2);
+            this.killerTabPage.Controls.Add(this.killerLockButton2);
             this.killerTabPage.Controls.Add(this.killerPerkLabel1);
             this.killerTabPage.Controls.Add(this.killerPerkImage1);
+            this.killerTabPage.Controls.Add(this.killerLockButton1);
             this.killerTabPage.Controls.Add(this.label8);
             this.killerTabPage.Controls.Add(this.killerRandomizeButton);
             this.killerTabPage.Controls.Add(this.label9);
@@ -714,6 +722,54 @@ namespace DBDRandomizer
             this.label10.TabIndex = 24;
             this.label10.Text = "1. Select available perks:";
 
+            //
+            // killerLockButton1
+            //
+            this.killerLockButton1.Enabled = false;
+            this.killerLockButton1.Location = new System.Drawing.Point(1190, 74);
+            this.killerLockButton1.Name = "killerLockButton1";
+            this.killerLockButton1.Size = new System.Drawing.Size(80, 30);
+            this.killerLockButton1.TabIndex = 43;
+            this.killerLockButton1.Text = "Lock";
+            this.killerLockButton1.UseVisualStyleBackColor = true;
+            this.killerLockButton1.Click += new System.EventHandler(this.killerLockButton1_Click);
+
+            //
+            // killerLockButton2
+            //
+            this.killerLockButton2.Enabled = false;
+            this.killerLockButton2.Location = new System.Drawing.Point(1190, 182);
+            this.killerLockButton2.Name = "killerLockButton2";
+            this.killerLockButton2.Size = new System.Drawing.Size(80, 30);
+            this.killerLockButton2.TabIndex = 44;
+            this.killerLockButton2.Text = "Lock";
+            this.killerLockButton2.UseVisualStyleBackColor = true;
+            this.killerLockButton2.Click += new System.EventHandler(this.killerLockButton2_Click);
+
+            //
+            // killerLockButton3
+            //
+            this.killerLockButton3.Enabled = false;
+            this.killerLockButton3.Location = new System.Drawing.Point(1190, 289);
+            this.killerLockButton3.Name = "killerLockButton3";
+            this.killerLockButton3.Size = new System.Drawing.Size(80, 30);
+            this.killerLockButton3.TabIndex = 45;
+            this.killerLockButton3.Text = "Lock";
+            this.killerLockButton3.UseVisualStyleBackColor = true;
+            this.killerLockButton3.Click += new System.EventHandler(this.killerLockButton3_Click);
+
+            //
+            // killerLockButton4
+            //
+            this.killerLockButton4.Enabled = false;
+            this.killerLockButton4.Location = new System.Drawing.Point(1190, 397);
+            this.killerLockButton4.Name = "killerLockButton4";
+            this.killerLockButton4.Size = new System.Drawing.Size(80, 30);
+            this.killerLockButton4.TabIndex = 46;
+            this.killerLockButton4.Text = "Lock";
+            this.killerLockButton4.UseVisualStyleBackColor = true;
+            this.killerLockButton4.Click += new System.EventHandler(this.killerLockButton4_Click);
+
             // 
             // Randomizer (Form properties)
             // 
@@ -814,6 +870,10 @@ namespace DBDRandomizer
         private PictureBox killerPerkImage2;
         private PictureBox killerPerkImage3;
         private PictureBox killerPerkImage4;
+        private Button killerLockButton1;
+        private Button killerLockButton2;
+        private Button killerLockButton3;
+        private Button killerLockButton4;
 
         #endregion
     }
